@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -12,39 +12,85 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Kieran_s_Magic_8_Ball" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="F3v-fB-HFU">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="F3v-fB-HFU">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="top" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cX9-7g-feb">
-                                <rect key="frame" x="152" y="587.33333333333337" width="111" height="57"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="36"/>
-                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Ask!" backgroundImage="bubble.left.fill" catalog="system">
-                                    <color key="titleColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="askButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dlQ-Q1-QX8"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ask me whatever you like!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zte-94-wDT">
-                                <rect key="frame" x="37" y="53" width="340" height="139"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="30"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ball1" translatesAutoresizingMaskIntoConstraints="NO" id="PCw-vc-96p">
-                                <rect key="frame" x="87" y="146" width="240" height="432"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="oRj-Ad-0Wq">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BzB-63-7uj" userLabel="topView">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="142.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ask me whatever you like!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zte-94-wDT">
+                                                <rect key="frame" x="46" y="54" width="322.5" height="34.5"/>
+                                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="30"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="Zte-94-wDT" firstAttribute="centerY" secondItem="BzB-63-7uj" secondAttribute="centerY" id="619-Nq-EMs"/>
+                                            <constraint firstItem="Zte-94-wDT" firstAttribute="centerX" secondItem="BzB-63-7uj" secondAttribute="centerX" id="ONm-yz-Zpq"/>
+                                            <constraint firstItem="Zte-94-wDT" firstAttribute="centerX" secondItem="BzB-63-7uj" secondAttribute="centerX" id="ZPf-Nu-Izm"/>
+                                            <constraint firstItem="Zte-94-wDT" firstAttribute="centerY" secondItem="BzB-63-7uj" secondAttribute="centerY" id="jyO-sd-dSg"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w43-Zq-aE9" userLabel="ballView">
+                                        <rect key="frame" x="0.0" y="142.5" width="414" height="543.5"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ball1" translatesAutoresizingMaskIntoConstraints="NO" id="PCw-vc-96p">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="543.5"/>
+                                            </imageView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="PCw-vc-96p" secondAttribute="trailing" id="N3x-1c-AI2"/>
+                                            <constraint firstItem="PCw-vc-96p" firstAttribute="leading" secondItem="w43-Zq-aE9" secondAttribute="leading" id="QnA-tJ-7SJ"/>
+                                            <constraint firstItem="PCw-vc-96p" firstAttribute="top" secondItem="w43-Zq-aE9" secondAttribute="top" id="Thv-ng-qMN"/>
+                                            <constraint firstAttribute="bottom" secondItem="PCw-vc-96p" secondAttribute="bottom" id="fh1-p2-Cqa"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I3I-e0-jew" userLabel="buttonView">
+                                        <rect key="frame" x="131.5" y="686" width="151" height="132"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cX9-7g-feb">
+                                                <rect key="frame" x="0.5" y="29" width="150" height="74.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="75" id="f8W-lo-jrI"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="hBL-9u-yCw"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="36"/>
+                                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <state key="normal" title="Ask!" backgroundImage="bubble.left.fill" catalog="system">
+                                                    <color key="titleColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="askButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dlQ-Q1-QX8"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="cX9-7g-feb" firstAttribute="centerX" secondItem="I3I-e0-jew" secondAttribute="centerX" id="0Nc-cN-8pn"/>
+                                            <constraint firstItem="cX9-7g-feb" firstAttribute="centerY" secondItem="I3I-e0-jew" secondAttribute="centerY" id="fmv-OI-qK1"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="oRj-Ad-0Wq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="6xW-dA-mqy"/>
+                            <constraint firstItem="oRj-Ad-0Wq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Bt4-UN-k7C"/>
+                            <constraint firstAttribute="trailing" secondItem="F3v-fB-HFU" secondAttribute="trailing" id="LCv-3Y-ekU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="oRj-Ad-0Wq" secondAttribute="bottom" id="PQc-ns-719"/>
+                            <constraint firstItem="F3v-fB-HFU" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="QNt-8q-e9q"/>
+                            <constraint firstItem="F3v-fB-HFU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="UiD-zF-vOC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oRj-Ad-0Wq" secondAttribute="trailing" id="Z9Z-Et-0Zc"/>
+                            <constraint firstAttribute="bottom" secondItem="F3v-fB-HFU" secondAttribute="bottom" id="tNs-b7-Qw5"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
@@ -53,12 +99,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="131.8840579710145" y="127.98913043478262"/>
+            <point key="canvasLocation" x="131.8840579710145" y="127.90178571428571"/>
         </scene>
     </scenes>
     <resources>
-        <image name="background" width="344.33334350585938" height="235"/>
-        <image name="ball1" width="340" height="340"/>
+        <image name="background" width="516.5" height="352.5"/>
+        <image name="ball1" width="510" height="510"/>
         <image name="bubble.left.fill" catalog="system" width="128" height="110"/>
     </resources>
 </document>
