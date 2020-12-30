@@ -57,6 +57,9 @@
                                                 <state key="normal" title="D">
                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="keyPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tFh-Qm-DIN"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -78,6 +81,9 @@
                                                 <state key="normal" title="E">
                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="keyPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4eL-Gh-xUC"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -99,6 +105,9 @@
                                                 <state key="normal" title="F">
                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="keyPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Eey-Ff-3p7"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -120,6 +129,9 @@
                                                 <state key="normal" title="G">
                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="keyPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zh9-CS-6xq"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -141,6 +153,9 @@
                                                 <state key="normal" title="A">
                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="keyPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SOc-ln-vpv"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -162,6 +177,9 @@
                                                 <state key="normal" title="B">
                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="keyPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5xW-6P-rjD"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
