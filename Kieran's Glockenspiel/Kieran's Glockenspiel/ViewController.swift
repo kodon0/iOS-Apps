@@ -31,7 +31,7 @@ class ViewController: UIViewController {
              //Bring's sender's opacity back up to fully opaque.
              sender.alpha = 1.0
             
-        // Plays sound based on note
+        // Plays sound based on note (a string), need ! to ensure definition
         self.playSound(note: sender.currentTitle!)
           }
         }
