@@ -9,14 +9,25 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    
+    let softTime = 4
+    let mediumTime = 8
+    let hardTime = 8
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-    
+
     @IBAction func hardnessSelector(_ sender: UIButton) {
-        print(sender.currentTitle!)
+        hardness = sender.currentTitle;);
+        if (hardness = "Soft"){
+            print(softTime)
+        }
+        else {
+            print(mediumTime)
+        }
     }
     
 }

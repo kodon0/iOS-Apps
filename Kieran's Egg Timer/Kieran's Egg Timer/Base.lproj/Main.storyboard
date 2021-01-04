@@ -10,7 +10,7 @@
         <!--View Controller-->
         <scene sceneID="z76-ra-oBa">
             <objects>
-                <viewController id="lOC-ep-J85" customClass="ViewController" customModule="EggTimer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="lOC-ep-J85" customClass="ViewController" customModule="Kieran_s_Egg_Timer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hwM-rT-f1a" userLabel="Background View">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -46,7 +46,7 @@
                                                         <fontDescription key="fontDescription" type="system" weight="black" pointSize="18"/>
                                                         <state key="normal" title="Soft"/>
                                                         <connections>
-                                                            <action selector="hardnessSelector:" destination="lOC-ep-J85" eventType="touchUpInside" id="t6d-SU-Q19"/>
+                                                            <action selector="hardnessSelector:" destination="lOC-ep-J85" eventType="touchUpInside" id="32Y-Gv-6br"/>
                                                         </connections>
                                                     </button>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="soft_egg" translatesAutoresizingMaskIntoConstraints="NO" id="pPX-Xk-NAU" userLabel="Soft Egg ImageView">
@@ -72,7 +72,7 @@
                                                         <fontDescription key="fontDescription" type="system" weight="black" pointSize="18"/>
                                                         <state key="normal" title="Medium"/>
                                                         <connections>
-                                                            <action selector="hardnessSelector:" destination="lOC-ep-J85" eventType="touchUpInside" id="J3g-jq-iHf"/>
+                                                            <action selector="hardnessSelector:" destination="lOC-ep-J85" eventType="touchUpInside" id="vh1-DH-Jrn"/>
                                                         </connections>
                                                     </button>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="medium_egg" translatesAutoresizingMaskIntoConstraints="NO" id="OHs-0h-X1P" userLabel="Medium Egg ImageView">
@@ -98,7 +98,7 @@
                                                         <fontDescription key="fontDescription" type="system" weight="black" pointSize="18"/>
                                                         <state key="normal" title="Hard"/>
                                                         <connections>
-                                                            <action selector="hardnessSelector:" destination="lOC-ep-J85" eventType="touchUpInside" id="sCa-z6-tNJ"/>
+                                                            <action selector="hardnessSelector:" destination="lOC-ep-J85" eventType="touchUpInside" id="gL2-yl-mOt"/>
                                                         </connections>
                                                     </button>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hard_egg" translatesAutoresizingMaskIntoConstraints="NO" id="qaY-cF-4Cf" userLabel="Hard Egg ImageView">
