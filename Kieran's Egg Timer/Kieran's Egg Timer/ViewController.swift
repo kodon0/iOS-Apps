@@ -10,10 +10,8 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    
-    let softTime = 4
-    let mediumTime = 8
-    let hardTime = 8
+//    Define time dict
+    let eggTimes = ["Soft": 4, "Medium":8, "Hard": 12]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,12 +19,17 @@ class ViewController: UIViewController {
     }
 
     @IBAction func hardnessSelector(_ sender: UIButton) {
-        hardness = sender.currentTitle;);
-        if (hardness = "Soft"){
-            print(softTime)
-        }
-        else {
-            print(mediumTime)
+        let hardness = sender.currentTitle!
+        
+        switch hardness {
+        case "Soft":
+            print(eggTimes["Soft"]!)
+        case "Medium":
+            print(eggTimes["Medium"]!)
+        case "Hard":
+            print(eggTimes["Hard"]!)
+        default:
+            print("Time out of range")
         }
     }
     
