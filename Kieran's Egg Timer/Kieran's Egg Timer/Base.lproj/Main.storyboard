@@ -133,6 +133,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="vhW-hk-IjX"/>
                     </view>
+                    <connections>
+                        <outlet property="eggLabel" destination="ZuJ-wJ-ADk" id="7Ne-yb-J6A"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sGR-AO-Bv0" sceneMemberID="firstResponder"/>
             </objects>
