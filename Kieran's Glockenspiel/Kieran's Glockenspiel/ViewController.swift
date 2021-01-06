@@ -13,10 +13,6 @@ class ViewController: UIViewController {
     
     var player: AVAudioPlayer!
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-    }
 
     @IBAction func keyPressed(_ sender: UIButton) {
         // Gets title of button, prints it with crrentTitle

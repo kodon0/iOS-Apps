@@ -15,6 +15,7 @@
 		2D1ACB1625A2C9530011775F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D1ACB1425A2C9530011775F /* LaunchScreen.storyboard */; };
 		2D1ACB2125A2C9530011775F /* Kieran_s_Egg_TimerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1ACB2025A2C9530011775F /* Kieran_s_Egg_TimerTests.swift */; };
 		2D1ACB2C25A2C9530011775F /* Kieran_s_Egg_TimerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1ACB2B25A2C9530011775F /* Kieran_s_Egg_TimerUITests.swift */; };
+		2D1ACB3A25A561560011775F /* C.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2D1ACB3925A561560011775F /* C.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		2D1ACB2725A2C9530011775F /* Kieran's Egg TimerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Kieran's Egg TimerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D1ACB2B25A2C9530011775F /* Kieran_s_Egg_TimerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kieran_s_Egg_TimerUITests.swift; sourceTree = "<group>"; };
 		2D1ACB2D25A2C9530011775F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2D1ACB3925A561560011775F /* C.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = C.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				2D1ACB0D25A2C94D0011775F /* ViewController.swift */,
 				2D1ACB0F25A2C94D0011775F /* Main.storyboard */,
 				2D1ACB1225A2C9530011775F /* Assets.xcassets */,
+				2D1ACB3925A561560011775F /* C.wav */,
 				2D1ACB1425A2C9530011775F /* LaunchScreen.storyboard */,
 				2D1ACB1725A2C9530011775F /* Info.plist */,
 			);
@@ -232,6 +235,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D1ACB3A25A561560011775F /* C.wav in Resources */,
 				2D1ACB1625A2C9530011775F /* LaunchScreen.storyboard in Resources */,
 				2D1ACB1325A2C9530011775F /* Assets.xcassets in Resources */,
 				2D1ACB1125A2C94D0011775F /* Main.storyboard in Resources */,
