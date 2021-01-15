@@ -36,37 +36,45 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         updateUI()
     }
     
 
     @IBAction func answerButtonPressed(_ sender: UIButton) {
         
+//        Rounded corners
+        sender.layer.cornerRadius = 0.3 * sender.bounds.size.height
+        
         let userAnswer = sender.currentTitle
         let correctAnswer = quizzQuestions[questionNumber].answer
         
-        if (userAnswer == correctAnswer){
-            print("Wawaweewa!")
+        if userAnswer == correctAnswer {
             sender.backgroundColor = UIColor.green
+            print("Wawaweewa!!!")
         } else {
-            print("Ich don't think so...")
             sender.backgroundColor = UIColor.red
+            print("Ich don't think so...")
         }
         
         if (questionNumber + 1 < quizzQuestions.count){
             questionNumber += 1
-            updateUI()
         } else {
             questionNumber = 0
         }
+        
+//        Adding delay
+        Timer.scheduledTimer(timeInterval: 0.3, target: self, selector: #selector(updateUI), userInfo: nil, repeats: false)
+        }
+
     
-    }
-    
-    func updateUI() {
+    @objc func updateUI() {
         questionLabel.text = quizzQuestions[questionNumber].text
         trueButton.backgroundColor = UIColor.clear
         falseButton.backgroundColor = UIColor.clear
-    }
-}
+//        Update progress bar
+        progressBar.progress = Float(questionNumber + 1)/Float(quizzQuestions.count)
 
+    }
+
+
+}
