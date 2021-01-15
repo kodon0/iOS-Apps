@@ -15,6 +15,7 @@
 		2DE1C1ED25AEBD2800D333D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DE1C1EB25AEBD2800D333D9 /* LaunchScreen.storyboard */; };
 		2DE1C1F825AEBD2800D333D9 /* QuizzicleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE1C1F725AEBD2800D333D9 /* QuizzicleTests.swift */; };
 		2DE1C20325AEBD2800D333D9 /* QuizzicleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE1C20225AEBD2800D333D9 /* QuizzicleUITests.swift */; };
+		2DE1C21125B0100300D333D9 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE1C21025B0100300D333D9 /* Question.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		2DE1C1FE25AEBD2800D333D9 /* QuizzicleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuizzicleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DE1C20225AEBD2800D333D9 /* QuizzicleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizzicleUITests.swift; sourceTree = "<group>"; };
 		2DE1C20425AEBD2800D333D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2DE1C21025B0100300D333D9 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				2DE1C1E925AEBD2800D333D9 /* Assets.xcassets */,
 				2DE1C1EB25AEBD2800D333D9 /* LaunchScreen.storyboard */,
 				2DE1C1EE25AEBD2800D333D9 /* Info.plist */,
+				2DE1C21025B0100300D333D9 /* Question.swift */,
 			);
 			path = Quizzicle;
 			sourceTree = "<group>";
@@ -260,6 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2DE1C1E525AEBD2300D333D9 /* ViewController.swift in Sources */,
+				2DE1C21125B0100300D333D9 /* Question.swift in Sources */,
 				2DE1C1E125AEBD2300D333D9 /* AppDelegate.swift in Sources */,
 				2DE1C1E325AEBD2300D333D9 /* SceneDelegate.swift in Sources */,
 			);
