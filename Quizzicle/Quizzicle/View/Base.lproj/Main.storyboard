@@ -21,8 +21,17 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="c60-TF-2gV">
                                 <rect key="frame" x="20" y="44" width="374" height="818"/>
                                 <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jhb-wY-85G">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="22"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="22" id="Jn5-YJ-1Kq"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xNM-9x-OdX">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="602"/>
+                                        <rect key="frame" x="0.0" y="35" width="374" height="567"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="33"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -61,6 +70,10 @@
                                         </constraints>
                                     </progressView>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="jhb-wY-85G" firstAttribute="leading" secondItem="c60-TF-2gV" secondAttribute="leading" id="WDc-WP-w2R"/>
+                                    <constraint firstItem="jhb-wY-85G" firstAttribute="top" secondItem="c60-TF-2gV" secondAttribute="top" id="q1b-ul-wGq"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -86,6 +99,7 @@
                         <outlet property="falseButton" destination="dh8-6D-tBk" id="VQN-KR-F2p"/>
                         <outlet property="progressBar" destination="DoU-5e-zjm" id="M4b-zK-8uI"/>
                         <outlet property="questionLabel" destination="xNM-9x-OdX" id="40u-vW-ft2"/>
+                        <outlet property="scoreLabel" destination="jhb-wY-85G" id="WQV-JT-hxd"/>
                         <outlet property="trueButton" destination="I68-hb-4bA" id="kfk-g8-sS7"/>
                     </connections>
                 </viewController>

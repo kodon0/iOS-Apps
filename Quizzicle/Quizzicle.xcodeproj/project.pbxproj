@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2DA51A0425B15EC700C85333 /* GameLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA51A0325B15EC700C85333 /* GameLogic.swift */; };
 		2DE1C1E125AEBD2300D333D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE1C1E025AEBD2300D333D9 /* AppDelegate.swift */; };
 		2DE1C1E325AEBD2300D333D9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE1C1E225AEBD2300D333D9 /* SceneDelegate.swift */; };
 		2DE1C1E525AEBD2300D333D9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE1C1E425AEBD2300D333D9 /* ViewController.swift */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2DA51A0325B15EC700C85333 /* GameLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameLogic.swift; sourceTree = "<group>"; };
 		2DE1C1DD25AEBD2300D333D9 /* Quizzicle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Quizzicle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DE1C1E025AEBD2300D333D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2DE1C1E225AEBD2300D333D9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +80,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2DA51A0025B15E5600C85333 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2DE1C21025B0100300D333D9 /* Question.swift */,
+				2DA51A0325B15EC700C85333 /* GameLogic.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2DA51A0125B15E6F00C85333 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2DE1C1E625AEBD2300D333D9 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2DA51A0225B15E7B00C85333 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2DE1C1E425AEBD2300D333D9 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		2DE1C1D425AEBD2300D333D9 = {
 			isa = PBXGroup;
 			children = (
@@ -103,12 +130,12 @@
 			children = (
 				2DE1C1E025AEBD2300D333D9 /* AppDelegate.swift */,
 				2DE1C1E225AEBD2300D333D9 /* SceneDelegate.swift */,
-				2DE1C1E425AEBD2300D333D9 /* ViewController.swift */,
-				2DE1C1E625AEBD2300D333D9 /* Main.storyboard */,
+				2DA51A0225B15E7B00C85333 /* Controller */,
+				2DA51A0125B15E6F00C85333 /* View */,
 				2DE1C1E925AEBD2800D333D9 /* Assets.xcassets */,
 				2DE1C1EB25AEBD2800D333D9 /* LaunchScreen.storyboard */,
 				2DE1C1EE25AEBD2800D333D9 /* Info.plist */,
-				2DE1C21025B0100300D333D9 /* Question.swift */,
+				2DA51A0025B15E5600C85333 /* Model */,
 			);
 			path = Quizzicle;
 			sourceTree = "<group>";
@@ -262,6 +289,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DA51A0425B15EC700C85333 /* GameLogic.swift in Sources */,
 				2DE1C1E525AEBD2300D333D9 /* ViewController.swift in Sources */,
 				2DE1C21125B0100300D333D9 /* Question.swift in Sources */,
 				2DE1C1E125AEBD2300D333D9 /* AppDelegate.swift in Sources */,

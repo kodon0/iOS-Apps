@@ -1,24 +1,17 @@
 //
-//  ViewController.swift
+//  QuizBrain.swift
 //  Quizzicle
 //
-//  Created by Kieran O'Donnell on 13/01/2021.
+//  Created by Kieran O'Donnell on 15/01/2021.
 //  Copyright © 2021 baxmanduppa. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
-class ViewController: UIViewController {
-
-    @IBOutlet weak var questionLabel: UILabel!
-    @IBOutlet weak var progressBar: UIProgressView!
-    @IBOutlet weak var trueButton: UIButton!
-    @IBOutlet weak var falseButton: UIButton!
-    
+struct GameLogic{
     let quizzQuestions = [
-        Question(q: "Is Harry Potter a muppet?", a: "True"),
-        Question(q: "Can I eat this?", a: "False"),
-        Question(q: "Is a hotdog a sandwich?", a: "True"),
+        Question(q: "Harry Potter is a muppet?", a: "True"),
+        Question(q: "A hotdog a sandwich?", a: "True"),
         Question(q: "A slug's blood is green.", a: "True"),
         Question(q: "Approximately one quarter of human bones are in the feet.", a: "True"),
         Question(q: "The total surface area of two human lungs is approximately 70 square metres.", a: "True"),
@@ -32,49 +25,38 @@ class ViewController: UIViewController {
         Question(q: "No piece of square dry paper can be folded in half more than 7 times.", a: "False"),
         Question(q: "Chocolate affects a dog's heart and nervous system; a few ounces are enough to kill a small dog.", a: "True")
     ]
-    var questionNumber = 0
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        updateUI()
+    var questionNumber = 0
+    var score = 0
+    
+    mutating func checkAnswer(_ userAnswer: String) -> Bool{
+        if userAnswer == quizzQuestions[questionNumber].answer{
+            score += 1
+            return true
+        } else {
+            return false
+        }
     }
     
-
-    @IBAction func answerButtonPressed(_ sender: UIButton) {
-        
-//        Rounded corners
-        sender.layer.cornerRadius = 0.3 * sender.bounds.size.height
-        
-        let userAnswer = sender.currentTitle
-        let correctAnswer = quizzQuestions[questionNumber].answer
-        
-        if userAnswer == correctAnswer {
-            sender.backgroundColor = UIColor.green
-            print("Wawaweewa!!!")
-        } else {
-            sender.backgroundColor = UIColor.red
-            print("Ich don't think so...")
-        }
-        
+    func getQuestionText() -> String {
+        return quizzQuestions[questionNumber].text
+    }
+    
+    func getProgress() -> Float {
+        let progress = Float(questionNumber + 1)/Float(quizzQuestions.count)
+        return progress
+    }
+    
+    mutating func nextQuestion(){
         if (questionNumber + 1 < quizzQuestions.count){
             questionNumber += 1
         } else {
             questionNumber = 0
+            score = 0
         }
-        
-//        Adding delay
-        Timer.scheduledTimer(timeInterval: 0.3, target: self, selector: #selector(updateUI), userInfo: nil, repeats: false)
-        }
-
-    
-    @objc func updateUI() {
-        questionLabel.text = quizzQuestions[questionNumber].text
-        trueButton.backgroundColor = UIColor.clear
-        falseButton.backgroundColor = UIColor.clear
-//        Update progress bar
-        progressBar.progress = Float(questionNumber + 1)/Float(quizzQuestions.count)
-
     }
-
-
+    
+    func getScore() -> Int {
+        return score
+    }
 }
