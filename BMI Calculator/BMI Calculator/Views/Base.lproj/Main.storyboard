@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Calculate View Controller-->
         <scene sceneID="X5Y-T3-xWW">
             <objects>
-                <viewController id="CAE-0x-1O4" customClass="ViewController" customModule="BMI_Calculator" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="CAE-0x-1O4" customClass="CalculateViewController" customModule="BMI_Calculator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eLt-eW-Tx1">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -128,27 +128,28 @@
                     <connections>
                         <outlet property="heightOut" destination="SSM-yd-DBB" id="vXY-iV-qqR"/>
                         <outlet property="heightValue" destination="TWd-hD-sVl" id="cX9-AG-DYb"/>
-                        <outlet property="weightOut" destination="KxQ-ug-Kwq" id="vxV-v6-XRW"/>
+                        <outlet property="weightOut" destination="KxQ-ug-Kwq" id="BZm-fw-amP"/>
                         <outlet property="weightValue" destination="0jM-pb-Ngx" id="kLe-WI-0Fc"/>
+                        <segue destination="imp-yC-7sp" kind="presentation" identifier="goToResults" id="FMK-Lh-niQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6aR-cG-Q4V" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="139" y="138"/>
         </scene>
-        <!--View Controller-->
+        <!--Result View Controller-->
         <scene sceneID="jdk-eP-zKo">
             <objects>
-                <viewController id="imp-yC-7sp" sceneMemberID="viewController">
+                <viewController id="imp-yC-7sp" customClass="ResultViewController" customModule="BMI_Calculator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="w7m-Yv-e3T">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="result_background" translatesAutoresizingMaskIntoConstraints="NO" id="YeL-vP-hfZ">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="1vh-Ax-YW9">
-                                <rect key="frame" x="88.5" y="359.5" width="237" height="177.5"/>
+                                <rect key="frame" x="88.5" y="332.5" width="237" height="177.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="YOUR RESULT" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X0p-sq-npe">
                                         <rect key="frame" x="0.0" y="0.0" width="237" height="42"/>
@@ -171,7 +172,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gsq-kz-eIm">
-                                <rect key="frame" x="20" y="811" width="374" height="51"/>
+                                <rect key="frame" x="20" y="757" width="374" height="51"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="51" id="d5P-Wh-Tna"/>
@@ -186,6 +187,9 @@
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="recalcBMI:" destination="imp-yC-7sp" eventType="touchUpInside" id="1oP-9e-9zD"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.19980379940000001" green="0.48169642689999997" blue="0.77313679459999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -202,6 +206,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Mxw-cy-rgR"/>
                     </view>
+                    <connections>
+                        <outlet property="adviceLabel" destination="kbK-i2-SDB" id="BSb-aZ-Etk"/>
+                        <outlet property="bmiLabel" destination="IMD-aN-yeg" id="p2p-GW-3oc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JHX-Nl-4Kd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
