@@ -9,18 +9,28 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+//    Need to define last selected button to keep track of it...
+    var lastSelectedButton = UIButton()
+    
     @IBOutlet weak var billTextField: UITextField!
     @IBOutlet weak var zeroPctButton: UIButton!
     @IBOutlet weak var tenPctButton: UIButton!
     @IBOutlet weak var twentyPctButton: UIButton!
     @IBOutlet weak var splitNumberLabel: UILabel!
+    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        tenPctButton.isSelected = false
     }
 
     @IBAction func tipChanged(_ sender: UIButton) {
+        
+        lastSelectedButton.isSelected = false //Plus any deselect logic for this button
+        lastSelectedButton = sender //If any buttons are not affect by this selection logic exclude them here
+        sender.isSelected = true
     }
     @IBAction func stepperValueChanged(_ sender: UIStepper) {
     }
@@ -28,3 +38,6 @@ class ViewController: UIViewController {
     }
 }
 
+//zeroPctButton.isSelected = true
+//tenPctButton.isSelected = false
+//twentyPctButton.isSelected = false

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5JX-xO-9wY">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -10,7 +10,7 @@
         <!--View Controller-->
         <scene sceneID="kOs-cm-Jzm">
             <objects>
-                <viewController id="5JX-xO-9wY" customClass="ViewController" customModule="Tipsy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="5JX-xO-9wY" customClass="ViewController" customModule="Tipperoni" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="x2T-k6-XVe">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -212,7 +212,7 @@
         <!--Results View Controller-->
         <scene sceneID="39a-bx-hOU">
             <objects>
-                <viewController id="J1e-h3-vTJ" customClass="ResultsViewController" customModule="Tipperoni" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="J1e-h3-vTJ" customClass="ResultsViewController" customModule="Tipperoni" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4zP-OC-dJD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -264,6 +264,9 @@
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="10f"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="recalcPressed:" destination="J1e-h3-vTJ" eventType="touchUpInside" id="KLJ-C6-80s"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Split between 2 people, with 10% tip." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZkM-f2-2bl">
                                 <rect key="frame" x="50" y="305" width="314" height="117"/>
@@ -288,6 +291,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="AgH-Ye-dId"/>
                     </view>
+                    <connections>
+                        <outlet property="settingLabel" destination="ZkM-f2-2bl" id="Yox-0U-Lvm"/>
+                        <outlet property="totalLabel" destination="1sk-3i-ROV" id="ddB-ew-gvV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Xf-Z3-hmE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
