@@ -18,7 +18,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var tenPctButton: UIButton!
     @IBOutlet weak var twentyPctButton: UIButton!
     @IBOutlet weak var splitNumberLabel: UILabel!
-    
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,16 +28,21 @@ class ViewController: UIViewController {
 
     @IBAction func tipChanged(_ sender: UIButton) {
         
-        lastSelectedButton.isSelected = false //Plus any deselect logic for this button
-        lastSelectedButton = sender //If any buttons are not affect by this selection logic exclude them here
-        sender.isSelected = true
+        lastSelectedButton.isSelected = false //Set last button to unselected
+        lastSelectedButton = sender // Reset last button to be sender
+        sender.isSelected = true // Set sender to be selected = true
+        var tipRate = sender.currentTitle!
+        tipRate = String(tipRate.dropLast())
+        print(Float(tipRate)!/100)
     }
     @IBAction func stepperValueChanged(_ sender: UIStepper) {
+//        splitNumberLabel = String(sender.value)
+        let stepperValue = String(Int(sender.value))
+        splitNumberLabel.text = stepperValue
     }
     @IBAction func calculatePressed(_ sender: UIButton) {
+        print(splitNumberLabel.text ?? 2)
     }
+    
 }
 
-//zeroPctButton.isSelected = true
-//tenPctButton.isSelected = false
-//twentyPctButton.isSelected = false
