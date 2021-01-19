@@ -12,6 +12,11 @@ class ViewController: UIViewController {
     
 //    Need to define last selected button to keep track of it...
     var lastSelectedButton = UIButton()
+
+    var tip = 0.10
+    var numberOfPeople = 2
+    var billTotal = 0.0
+    var finalResult = "0.0"
     
     @IBOutlet weak var billTextField: UITextField!
     @IBOutlet weak var zeroPctButton: UIButton!
@@ -31,18 +36,40 @@ class ViewController: UIViewController {
         lastSelectedButton.isSelected = false //Set last button to unselected
         lastSelectedButton = sender // Reset last button to be sender
         sender.isSelected = true // Set sender to be selected = true
-        var tipRate = sender.currentTitle!
-        tipRate = String(tipRate.dropLast())
-        print(Float(tipRate)!/100)
-    }
-    @IBAction func stepperValueChanged(_ sender: UIStepper) {
-//        splitNumberLabel = String(sender.value)
-        let stepperValue = String(Int(sender.value))
-        splitNumberLabel.text = stepperValue
-    }
-    @IBAction func calculatePressed(_ sender: UIButton) {
-        print(splitNumberLabel.text ?? 2)
+        
+        
+        let tipRateText = String(sender.currentTitle!.dropLast())
+        var tipRateNum = Double(tipRateText)!
+        tip = tipRateNum/100
     }
     
+    @IBAction func stepperValueChanged(_ sender: UIStepper) {
+        
+        splitNumberLabel.text = String(format: "%.0f", sender.value)
+        numberOfPeople = Int(sender.value)
+    }
+    
+    @IBAction func calculatePressed(_ sender: UIButton) {
+
+        
+        let bill = billTextField.text!
+        if bill != "" {
+            billTotal = Double(bill)!
+            let result = billTotal * (1 + tip) / Double(numberOfPeople)
+            finalResult = String(format: "%.2f", result)
+        }
+        self.performSegue(withIdentifier: "goToResults", sender: self)
+    }
+    
+    //    Prepare for the segue
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToResults"{
+            let destinationVC = segue.destination as! ResultsViewController
+            destinationVC.result = finalResult
+            destinationVC.tip = Int(tip * 100)
+            destinationVC.numberOfPeople = numberOfPeople
+        }
+    }
+
 }
 
