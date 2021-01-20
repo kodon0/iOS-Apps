@@ -11,17 +11,18 @@ import AVFoundation //For sound
 
 class ViewController: UIViewController {
     
+    //    Define time dict
+        let eggTimes = ["Soft": (4*60), "Medium":(8*60), "Hard": (12*60)]
+    //    Initial value of counter
+        var secondsElapsed = 0.0
+        var totalTime = 0.0
+        var player: AVAudioPlayer!
+        
+        
+        var timer = Timer()
+    
     @IBOutlet var eggLabel: UILabel!
     
-    //    Define time dict
-    let eggTimes = ["Soft": (4*60), "Medium":(8*60), "Hard": (12*60)]
-//    Initial value of counter
-    var secondsElapsed = 0.0
-    var totalTime = 0.0
-    var player: AVAudioPlayer!
-    
-    
-    var timer = Timer()
 //    Removed viewDidLoad - no useful code for this method so safe to delete since any superclass that overrides it will still be called
     @IBOutlet var progress: UIProgressView!
     
