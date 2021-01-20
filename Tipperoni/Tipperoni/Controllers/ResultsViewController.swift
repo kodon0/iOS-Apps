@@ -10,9 +10,9 @@ import UIKit
 
 class ResultsViewController: UIViewController {
     
-    var result: String!
-    var tip: Int!
-    var numberOfPeople: Int!
+    var result: String?
+    var tip: Int?
+    var numberOfPeople: Int?
     
     @IBOutlet weak var totalLabel: UILabel!
     @IBOutlet weak var settingLabel: UILabel!
