@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="dark"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3lW-Ds-FUi">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -106,11 +106,6 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="GP4-83-b3F"/>
                     </view>
-                    <connections>
-                        <outlet property="cityLabel" destination="a7m-vs-mCA" id="fXL-Wq-AhV"/>
-                        <outlet property="conditionImageView" destination="RFN-hh-MWV" id="z9s-Qq-Y4B"/>
-                        <outlet property="temperatureLabel" destination="QY0-Nt-rdB" id="xtO-21-kyN"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3qe-t0-IL2" sceneMemberID="firstResponder"/>
             </objects>
