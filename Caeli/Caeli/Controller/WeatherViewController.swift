@@ -14,7 +14,7 @@ class WeatherViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
- Add section for weather app control
-
+// Add section for weather app control
+Insert UI elements 
 }
 
