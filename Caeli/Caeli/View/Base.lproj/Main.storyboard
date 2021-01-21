@@ -33,11 +33,11 @@
                                                 <color key="tintColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <state key="normal" backgroundImage="location.circle.fill" catalog="system"/>
                                             </button>
-                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search" textAlignment="right" clearsOnBeginEditing="YES" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="NYZ-AG-fXu">
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Location Search" textAlignment="right" clearsOnBeginEditing="YES" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="NYZ-AG-fXu">
                                                 <rect key="frame" x="50" y="0.0" width="274" height="40"/>
                                                 <color key="backgroundColor" systemColor="systemFillColor" red="0.47058823529999999" green="0.47058823529999999" blue="0.50196078430000002" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RZp-Tn-BOH">
                                                 <rect key="frame" x="334" y="1" width="40" height="38"/>
@@ -47,6 +47,9 @@
                                                 </constraints>
                                                 <color key="tintColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <state key="normal" backgroundImage="magnifyingglass" catalog="system"/>
+                                                <connections>
+                                                    <action selector="searchButtonPressed:" destination="3lW-Ds-FUi" eventType="touchUpInside" id="1zW-by-soR"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -106,6 +109,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="GP4-83-b3F"/>
                     </view>
+                    <connections>
+                        <outlet property="conditionImageView" destination="RFN-hh-MWV" id="H84-ll-KoW"/>
+                        <outlet property="locationLabel" destination="a7m-vs-mCA" id="tWG-2D-HRb"/>
+                        <outlet property="searchTextField" destination="NYZ-AG-fXu" id="9Pb-Mc-vUd"/>
+                        <outlet property="tempLabel" destination="QY0-Nt-rdB" id="K2O-ad-oxb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3qe-t0-IL2" sceneMemberID="firstResponder"/>
             </objects>
