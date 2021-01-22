@@ -11,6 +11,7 @@ import Foundation
 //Getting structure from API JSON -> decodable
 //Need to get tree info for JSON keys
 //Weather is an array...
+//Define WeatherData data structure
 struct WeatherData: Codable {
     let name:String
     let main: Main
