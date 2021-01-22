@@ -10,7 +10,9 @@ import UIKit
 
 class WeatherViewController: UIViewController, UITextFieldDelegate {
     
-//    Need to inclued UITextFieldDelegate to register what happens in text field
+    var weatherManager = WeatherManager()
+    
+//    Need to inclued UITextFieldDelegate protocol to register what happens in text field
     @IBOutlet weak var conditionImageView: UIImageView!
     @IBOutlet weak var tempLabel: UILabel!
     @IBOutlet weak var locationLabel: UILabel!
@@ -45,6 +47,10 @@ class WeatherViewController: UIViewController, UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {
 //        To be triggered after editing ended
 //        Use searchTextField.text for searching the weather. Then reset search to empty string.
+        
+        if let city = searchTextField.text {
+            weatherManager.fetchWeather(cityName: city)
+        }
         searchTextField.text = ""
     }
 }
