@@ -11,16 +11,16 @@ import Foundation
 //Getting structure from API JSON -> decodable
 //Need to get tree info for JSON keys
 //Weather is an array...
-struct WeatherData: Decodable {
+struct WeatherData: Codable {
     let name:String
     let main: Main
     let weather: [Weather]
 }
-struct Main: Decodable{
+struct Main: Codable{
     let temp:Double
     let humidity: Double
 }
-struct Weather: Decodable{
+struct Weather: Codable{
     let description: String
     let id: Int
 }
