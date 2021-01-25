@@ -8,6 +8,7 @@
 
 import Foundation
 
+//Define protocol to make a delegate design pattern
 protocol WeatherManagerDelegate {
     func didUpdateWeather(weather: WeatherModel)
 }

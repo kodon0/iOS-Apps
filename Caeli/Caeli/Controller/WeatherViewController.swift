@@ -12,7 +12,7 @@ class WeatherViewController: UIViewController, UITextFieldDelegate, WeatherManag
     
     var weatherManager = WeatherManager()
     
-//    Need to inclued UITextFieldDelegate protocol to register what happens in text field
+//    Need to include UITextFieldDelegate protocol to register what happens in text field
     @IBOutlet weak var conditionImageView: UIImageView!
     @IBOutlet weak var tempLabel: UILabel!
     @IBOutlet weak var locationLabel: UILabel!
