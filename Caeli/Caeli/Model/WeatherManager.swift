@@ -48,6 +48,7 @@ struct WeatherManager {
         }
     }
     func parseJSON(weatherData: Data) -> WeatherModel? {
+//        Need to output data in JSON as a WeatherModel data type
         let decoder = JSONDecoder()
         do {
             let decodedData = try decoder.decode(WeatherData.self, from: weatherData)
