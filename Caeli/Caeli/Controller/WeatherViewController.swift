@@ -24,11 +24,15 @@ class WeatherViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        locationManager.requestWhenInUseAuthorization() //        Ask for explicit permission for location
+        locationManager.requestWhenInUseAuthorization() //Ask for explicit permission for location
         locationManager.delegate = self
         locationManager.requestLocation() //Needs to be after locationManager.delegate = self
         searchTextField.delegate = self
         weatherManager.delegate = self
+    }
+    
+    @IBAction func locationButton(_ sender: UIButton) {
+        locationManager.requestLocation()
     }
 }
 
@@ -41,7 +45,7 @@ extension WeatherViewController: UITextFieldDelegate{
         func textFieldShouldReturn(_ textField: UITextField) -> Bool {
             
     //        This function registers what user inserted and submitted with keyboard return key
-    //        searchTextField.endEditing(true) dismisses keyboard after typing andpressing return
+    //        searchTextField.endEditing(true) dismisses keyboard after typing and pressing return
             searchTextField.endEditing(true)
             print(searchTextField.text!)
             return true
@@ -76,6 +80,7 @@ extension WeatherViewController:WeatherManagerDelegate {
             DispatchQueue.main.async { // Correct - async implementation on different thread - so user doesn't think app crashed
                 self.tempLabel.text = weather.temperatureString
                 self.conditionImageView.image = UIImage(systemName: weather.conditionName)
+                self.locationLabel.text = weather.cityName 
             }
             
         }
@@ -91,10 +96,10 @@ extension WeatherViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         print("Got location data")
         if let locations = locations.last {
-            let latitude = locations.coordinate.latitude
-            let longitude = locations.coordinate.longitude
-            print(latitude)
-            print(longitude)
+            locationManager.stopUpdatingLocation() //Need to stop it so when locationButton is pressed it rexecutes!
+            let lat = locations.coordinate.latitude
+            let lon = locations.coordinate.longitude
+            weatherManager.fetchWeather(latitude:lat, longitude:lon)
         }
     }
     

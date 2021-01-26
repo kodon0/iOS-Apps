@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CoreLocation
 
 //Define protocol to make a delegate design pattern
 protocol WeatherManagerDelegate {
@@ -21,6 +22,14 @@ struct WeatherManager {
     var delegate: WeatherManagerDelegate?
     func fetchWeather(cityName: String) {
         let urlString = "\(weatherURL)&q=\(cityName)"
+        self.performRequest(with: urlString)
+    }
+    
+//    Swift can have 2 functions with same name...
+//    One is for searching for city, other is for using the location button
+    
+    func fetchWeather(latitude: CLLocationDegrees, longitude: CLLocationDegrees) {
+        let urlString = "\(weatherURL)&lat=\(latitude)&lon=\(longitude)"
         self.performRequest(with: urlString)
     }
     func performRequest(with urlString: String){

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3lW-Ds-FUi">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="dark"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -32,6 +32,9 @@
                                                 </constraints>
                                                 <color key="tintColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <state key="normal" backgroundImage="location.circle.fill" catalog="system"/>
+                                                <connections>
+                                                    <action selector="locationButton:" destination="3lW-Ds-FUi" eventType="touchUpInside" id="aMW-9h-ECQ"/>
+                                                </connections>
                                             </button>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Location Search" textAlignment="right" clearsOnBeginEditing="YES" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="NYZ-AG-fXu">
                                                 <rect key="frame" x="50" y="0.0" width="274" height="40"/>
