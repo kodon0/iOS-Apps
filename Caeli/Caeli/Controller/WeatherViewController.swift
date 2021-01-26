@@ -7,10 +7,13 @@
 //
 
 import UIKit
+import CoreLocation
 
 class WeatherViewController: UIViewController {
     
     var weatherManager = WeatherManager()
+    let locationManager = CLLocationManager()
+//    Add location functionality!
     
 //    Need to include UITextFieldDelegate protocol to register what happens in text field
     @IBOutlet weak var conditionImageView: UIImageView!
@@ -20,6 +23,10 @@ class WeatherViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        locationManager.requestWhenInUseAuthorization() //        Ask for explicit permission for location
+        locationManager.delegate = self
+        locationManager.requestLocation() //Needs to be after locationManager.delegate = self
         searchTextField.delegate = self
         weatherManager.delegate = self
     }
@@ -78,4 +85,20 @@ extension WeatherViewController:WeatherManagerDelegate {
             print(error)
         }
     
+}
+// MARK: - CLLocationManagerDelegate
+extension WeatherViewController: CLLocationManagerDelegate {
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        print("Got location data")
+        if let locations = locations.last {
+            let latitude = locations.coordinate.latitude
+            let longitude = locations.coordinate.longitude
+            print(latitude)
+            print(longitude)
+        }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print(error) // Dthis delegate method needs to be included 
+    }
 }
