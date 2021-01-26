@@ -10,7 +10,8 @@ import Foundation
 
 //Define protocol to make a delegate design pattern
 protocol WeatherManagerDelegate {
-    func didUpdateWeather(weather: WeatherModel)
+    func didUpdateWeather(_ weatherManager: WeatherManager, weather: WeatherModel)
+    func didFailWithError(error:Error)
 }
 
 struct WeatherManager {
@@ -20,9 +21,9 @@ struct WeatherManager {
     var delegate: WeatherManagerDelegate?
     func fetchWeather(cityName: String) {
         let urlString = "\(weatherURL)&q=\(cityName)"
-        self.performRequest(urlString: urlString)
+        self.performRequest(with: urlString)
     }
-    func performRequest(urlString: String){
+    func performRequest(with urlString: String){
         //        Check if string is nil
         print(URL(string: urlString) ?? "Nil URL")
         print("*\(urlString)*")
@@ -35,11 +36,13 @@ struct WeatherManager {
                 if error != nil {
                     //            If there is an error, print it in debug console
                     print(error!)
+                    self.delegate?.didFailWithError(error: error!)
+                    //                    Pass error to delegate
                     return
                 }
                 if let safeData = data{
-                    if let weather = self.parseJSON(weatherData: safeData){
-                        self.delegate?.didUpdateWeather(weather: weather)
+                    if let weather = self.parseJSON(safeData){
+                        self.delegate?.didUpdateWeather(self, weather: weather)
                     }
                 }
             }
@@ -47,7 +50,7 @@ struct WeatherManager {
             task.resume()
         }
     }
-    func parseJSON(weatherData: Data) -> WeatherModel? {
+    func parseJSON(_ weatherData: Data) -> WeatherModel? {
 //        Need to output data in JSON as a WeatherModel data type
         let decoder = JSONDecoder()
         do {
@@ -57,16 +60,10 @@ struct WeatherManager {
             let name = decodedData.name
             let hum = decodedData.main.humidity
             let weather = WeatherModel(conditionId: id, cityName: name, temperature: temp, humidity: hum)
-//            print(weather.conditionName)
-//            print(weather.temperatureString)
-//            print(weather.humidityString)
-//            print(decodedData.weather[0].description)
-//            print(decodedData.weather[0].id)
-//            print(decodedData.main.humidity)
-//            print(decodedData.main.temp)
+
             return weather
         } catch{
-            print(error)
+            delegate?.didFailWithError(error: error!)
             return nil
         }
     }
