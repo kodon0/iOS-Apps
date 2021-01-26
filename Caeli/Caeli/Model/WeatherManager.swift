@@ -63,7 +63,7 @@ struct WeatherManager {
 
             return weather
         } catch{
-            delegate?.didFailWithError(error: error!)
+            delegate?.didFailWithError(error: error)
             return nil
         }
     }
