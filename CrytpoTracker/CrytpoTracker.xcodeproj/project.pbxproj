@@ -1,0 +1,617 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2D70007E25C0DDF700AA1ADB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D70007D25C0DDF700AA1ADB /* AppDelegate.swift */; };
+		2D70008025C0DDF700AA1ADB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D70007F25C0DDF700AA1ADB /* SceneDelegate.swift */; };
+		2D70008225C0DDF700AA1ADB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D70008125C0DDF700AA1ADB /* ViewController.swift */; };
+		2D70008525C0DDF700AA1ADB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D70008325C0DDF700AA1ADB /* Main.storyboard */; };
+		2D70008725C0DDFD00AA1ADB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D70008625C0DDFD00AA1ADB /* Assets.xcassets */; };
+		2D70008A25C0DDFD00AA1ADB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D70008825C0DDFD00AA1ADB /* LaunchScreen.storyboard */; };
+		2D70009525C0DDFD00AA1ADB /* CrytpoTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D70009425C0DDFD00AA1ADB /* CrytpoTrackerTests.swift */; };
+		2D7000A025C0DDFE00AA1ADB /* CrytpoTrackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D70009F25C0DDFE00AA1ADB /* CrytpoTrackerUITests.swift */; };
+		2D7000B125C0E06700AA1ADB /* CoinManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7000B025C0E06700AA1ADB /* CoinManager.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2D70009125C0DDFD00AA1ADB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2D70007225C0DDF700AA1ADB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2D70007925C0DDF700AA1ADB;
+			remoteInfo = CrytpoTracker;
+		};
+		2D70009C25C0DDFE00AA1ADB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2D70007225C0DDF700AA1ADB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2D70007925C0DDF700AA1ADB;
+			remoteInfo = CrytpoTracker;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2D70007A25C0DDF700AA1ADB /* CrytpoTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrytpoTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D70007D25C0DDF700AA1ADB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2D70007F25C0DDF700AA1ADB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		2D70008125C0DDF700AA1ADB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2D70008425C0DDF700AA1ADB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2D70008625C0DDFD00AA1ADB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2D70008925C0DDFD00AA1ADB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2D70008B25C0DDFD00AA1ADB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2D70009025C0DDFD00AA1ADB /* CrytpoTrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CrytpoTrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D70009425C0DDFD00AA1ADB /* CrytpoTrackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrytpoTrackerTests.swift; sourceTree = "<group>"; };
+		2D70009625C0DDFD00AA1ADB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2D70009B25C0DDFE00AA1ADB /* CrytpoTrackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CrytpoTrackerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D70009F25C0DDFE00AA1ADB /* CrytpoTrackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrytpoTrackerUITests.swift; sourceTree = "<group>"; };
+		2D7000A125C0DDFE00AA1ADB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2D7000B025C0E06700AA1ADB /* CoinManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinManager.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2D70007725C0DDF700AA1ADB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2D70008D25C0DDFD00AA1ADB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2D70009825C0DDFE00AA1ADB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2D70007125C0DDF700AA1ADB = {
+			isa = PBXGroup;
+			children = (
+				2D70007C25C0DDF700AA1ADB /* CrytpoTracker */,
+				2D70009325C0DDFD00AA1ADB /* CrytpoTrackerTests */,
+				2D70009E25C0DDFE00AA1ADB /* CrytpoTrackerUITests */,
+				2D70007B25C0DDF700AA1ADB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2D70007B25C0DDF700AA1ADB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2D70007A25C0DDF700AA1ADB /* CrytpoTracker.app */,
+				2D70009025C0DDFD00AA1ADB /* CrytpoTrackerTests.xctest */,
+				2D70009B25C0DDFE00AA1ADB /* CrytpoTrackerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2D70007C25C0DDF700AA1ADB /* CrytpoTracker */ = {
+			isa = PBXGroup;
+			children = (
+				2D7000AF25C0E04B00AA1ADB /* Model */,
+				2D70007D25C0DDF700AA1ADB /* AppDelegate.swift */,
+				2D70007F25C0DDF700AA1ADB /* SceneDelegate.swift */,
+				2D7000AD25C0E03400AA1ADB /* Controller */,
+				2D7000AE25C0E04200AA1ADB /* View */,
+				2D70008625C0DDFD00AA1ADB /* Assets.xcassets */,
+				2D70008825C0DDFD00AA1ADB /* LaunchScreen.storyboard */,
+				2D70008B25C0DDFD00AA1ADB /* Info.plist */,
+			);
+			path = CrytpoTracker;
+			sourceTree = "<group>";
+		};
+		2D70009325C0DDFD00AA1ADB /* CrytpoTrackerTests */ = {
+			isa = PBXGroup;
+			children = (
+				2D70009425C0DDFD00AA1ADB /* CrytpoTrackerTests.swift */,
+				2D70009625C0DDFD00AA1ADB /* Info.plist */,
+			);
+			path = CrytpoTrackerTests;
+			sourceTree = "<group>";
+		};
+		2D70009E25C0DDFE00AA1ADB /* CrytpoTrackerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2D70009F25C0DDFE00AA1ADB /* CrytpoTrackerUITests.swift */,
+				2D7000A125C0DDFE00AA1ADB /* Info.plist */,
+			);
+			path = CrytpoTrackerUITests;
+			sourceTree = "<group>";
+		};
+		2D7000AD25C0E03400AA1ADB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2D70008125C0DDF700AA1ADB /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2D7000AE25C0E04200AA1ADB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2D70008325C0DDF700AA1ADB /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2D7000AF25C0E04B00AA1ADB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2D7000B025C0E06700AA1ADB /* CoinManager.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2D70007925C0DDF700AA1ADB /* CrytpoTracker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2D7000A425C0DDFE00AA1ADB /* Build configuration list for PBXNativeTarget "CrytpoTracker" */;
+			buildPhases = (
+				2D70007625C0DDF700AA1ADB /* Sources */,
+				2D70007725C0DDF700AA1ADB /* Frameworks */,
+				2D70007825C0DDF700AA1ADB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CrytpoTracker;
+			productName = CrytpoTracker;
+			productReference = 2D70007A25C0DDF700AA1ADB /* CrytpoTracker.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2D70008F25C0DDFD00AA1ADB /* CrytpoTrackerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2D7000A725C0DDFE00AA1ADB /* Build configuration list for PBXNativeTarget "CrytpoTrackerTests" */;
+			buildPhases = (
+				2D70008C25C0DDFD00AA1ADB /* Sources */,
+				2D70008D25C0DDFD00AA1ADB /* Frameworks */,
+				2D70008E25C0DDFD00AA1ADB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2D70009225C0DDFD00AA1ADB /* PBXTargetDependency */,
+			);
+			name = CrytpoTrackerTests;
+			productName = CrytpoTrackerTests;
+			productReference = 2D70009025C0DDFD00AA1ADB /* CrytpoTrackerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2D70009A25C0DDFE00AA1ADB /* CrytpoTrackerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2D7000AA25C0DDFE00AA1ADB /* Build configuration list for PBXNativeTarget "CrytpoTrackerUITests" */;
+			buildPhases = (
+				2D70009725C0DDFE00AA1ADB /* Sources */,
+				2D70009825C0DDFE00AA1ADB /* Frameworks */,
+				2D70009925C0DDFE00AA1ADB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2D70009D25C0DDFE00AA1ADB /* PBXTargetDependency */,
+			);
+			name = CrytpoTrackerUITests;
+			productName = CrytpoTrackerUITests;
+			productReference = 2D70009B25C0DDFE00AA1ADB /* CrytpoTrackerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2D70007225C0DDF700AA1ADB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1160;
+				LastUpgradeCheck = 1160;
+				ORGANIZATIONNAME = baxmanduppa;
+				TargetAttributes = {
+					2D70007925C0DDF700AA1ADB = {
+						CreatedOnToolsVersion = 11.6;
+					};
+					2D70008F25C0DDFD00AA1ADB = {
+						CreatedOnToolsVersion = 11.6;
+						TestTargetID = 2D70007925C0DDF700AA1ADB;
+					};
+					2D70009A25C0DDFE00AA1ADB = {
+						CreatedOnToolsVersion = 11.6;
+						TestTargetID = 2D70007925C0DDF700AA1ADB;
+					};
+				};
+			};
+			buildConfigurationList = 2D70007525C0DDF700AA1ADB /* Build configuration list for PBXProject "CrytpoTracker" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2D70007125C0DDF700AA1ADB;
+			productRefGroup = 2D70007B25C0DDF700AA1ADB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2D70007925C0DDF700AA1ADB /* CrytpoTracker */,
+				2D70008F25C0DDFD00AA1ADB /* CrytpoTrackerTests */,
+				2D70009A25C0DDFE00AA1ADB /* CrytpoTrackerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2D70007825C0DDF700AA1ADB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2D70008A25C0DDFD00AA1ADB /* LaunchScreen.storyboard in Resources */,
+				2D70008725C0DDFD00AA1ADB /* Assets.xcassets in Resources */,
+				2D70008525C0DDF700AA1ADB /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2D70008E25C0DDFD00AA1ADB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2D70009925C0DDFE00AA1ADB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2D70007625C0DDF700AA1ADB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2D7000B125C0E06700AA1ADB /* CoinManager.swift in Sources */,
+				2D70008225C0DDF700AA1ADB /* ViewController.swift in Sources */,
+				2D70007E25C0DDF700AA1ADB /* AppDelegate.swift in Sources */,
+				2D70008025C0DDF700AA1ADB /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2D70008C25C0DDFD00AA1ADB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2D70009525C0DDFD00AA1ADB /* CrytpoTrackerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2D70009725C0DDFE00AA1ADB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2D7000A025C0DDFE00AA1ADB /* CrytpoTrackerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2D70009225C0DDFD00AA1ADB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2D70007925C0DDF700AA1ADB /* CrytpoTracker */;
+			targetProxy = 2D70009125C0DDFD00AA1ADB /* PBXContainerItemProxy */;
+		};
+		2D70009D25C0DDFE00AA1ADB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2D70007925C0DDF700AA1ADB /* CrytpoTracker */;
+			targetProxy = 2D70009C25C0DDFE00AA1ADB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2D70008325C0DDF700AA1ADB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2D70008425C0DDF700AA1ADB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2D70008825C0DDFD00AA1ADB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2D70008925C0DDFD00AA1ADB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2D7000A225C0DDFE00AA1ADB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2D7000A325C0DDFE00AA1ADB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2D7000A525C0DDFE00AA1ADB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CrytpoTracker/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = co.baxmanduppa.CrytpoTracker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2D7000A625C0DDFE00AA1ADB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CrytpoTracker/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = co.baxmanduppa.CrytpoTracker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		2D7000A825C0DDFE00AA1ADB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CrytpoTrackerTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = co.baxmanduppa.CrytpoTrackerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CrytpoTracker.app/CrytpoTracker";
+			};
+			name = Debug;
+		};
+		2D7000A925C0DDFE00AA1ADB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CrytpoTrackerTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = co.baxmanduppa.CrytpoTrackerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CrytpoTracker.app/CrytpoTracker";
+			};
+			name = Release;
+		};
+		2D7000AB25C0DDFE00AA1ADB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CrytpoTrackerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = co.baxmanduppa.CrytpoTrackerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CrytpoTracker;
+			};
+			name = Debug;
+		};
+		2D7000AC25C0DDFE00AA1ADB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CrytpoTrackerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = co.baxmanduppa.CrytpoTrackerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CrytpoTracker;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D70007525C0DDF700AA1ADB /* Build configuration list for PBXProject "CrytpoTracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2D7000A225C0DDFE00AA1ADB /* Debug */,
+				2D7000A325C0DDFE00AA1ADB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D7000A425C0DDFE00AA1ADB /* Build configuration list for PBXNativeTarget "CrytpoTracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2D7000A525C0DDFE00AA1ADB /* Debug */,
+				2D7000A625C0DDFE00AA1ADB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D7000A725C0DDFE00AA1ADB /* Build configuration list for PBXNativeTarget "CrytpoTrackerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2D7000A825C0DDFE00AA1ADB /* Debug */,
+				2D7000A925C0DDFE00AA1ADB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D7000AA25C0DDFE00AA1ADB /* Build configuration list for PBXNativeTarget "CrytpoTrackerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2D7000AB25C0DDFE00AA1ADB /* Debug */,
+				2D7000AC25C0DDFE00AA1ADB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2D70007225C0DDF700AA1ADB /* Project object */;
+}
