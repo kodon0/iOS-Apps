@@ -11,6 +11,7 @@ import UIKit
 class ViewController: UIViewController,UIPickerViewDataSource, UIPickerViewDelegate {
     
     let coinManager = CoinManager()
+
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1 // Only want 1 column in picker
     }
@@ -39,17 +40,18 @@ class ViewController: UIViewController,UIPickerViewDataSource, UIPickerViewDeleg
 
 }
 
-extension ViewController: CoinManagerDelegate {
-    func didFailWithError(error: Error) {
-        print(error)
-    }
-    
-    func didUpdatePrice(_ coinManager: CoinManager)(){
-        DispatchQueue.main.async { // Correct - async implementation on different thread - so user doesn't think app crashed
-            self.tempLabel.text = 
-            self.conditionImageView.image = UIImage(systemName: weather.conditionName)
-            self.locationLabel.text = weather.cityName
-        }
-        
-    }
-}
+//extension ViewController: CoinManagerDelegate {
+
+//
+//    func didFailWithError(error: Error) {
+//        print(error)
+//    }
+//
+//    func didUpdatePrice(price:String, currency: String){
+//        DispatchQueue.main.async { // Correct - async implementation on different thread - so user doesn't think app crashed
+//            self.bitCoinLabel.text = price
+//            self.bitCoinLabel.text = currency
+//        }
+//
+//    }
+//}
