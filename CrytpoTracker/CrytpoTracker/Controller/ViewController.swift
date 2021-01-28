@@ -39,3 +39,17 @@ class ViewController: UIViewController,UIPickerViewDataSource, UIPickerViewDeleg
 
 }
 
+extension ViewController: CoinManagerDelegate {
+    func didFailWithError(error: Error) {
+        print(error)
+    }
+    
+    func didUpdatePrice(_ coinManager: CoinManager)(){
+        DispatchQueue.main.async { // Correct - async implementation on different thread - so user doesn't think app crashed
+            self.tempLabel.text = 
+            self.conditionImageView.image = UIImage(systemName: weather.conditionName)
+            self.locationLabel.text = weather.cityName
+        }
+        
+    }
+}

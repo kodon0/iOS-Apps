@@ -9,7 +9,7 @@
 import Foundation
 
 protocol CoinManagerDelegate {
-    func didUpdateWeather(_ coinManager: CoinManager)
+    func didUpdatePrice(_ coinManager: CoinManager)
     func didFailWithError(error:Error)
 }
 
