@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController,UIPickerViewDataSource, UIPickerViewDelegate {
     
-    let coinManager = CoinManager()
+    var coinManager = CoinManager()
 
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1 // Only want 1 column in picker
@@ -35,23 +35,24 @@ class ViewController: UIViewController,UIPickerViewDataSource, UIPickerViewDeleg
         super.viewDidLoad()
         currencyPicker.dataSource = self
         currencyPicker.delegate =  self
+        coinManager.delegate = self
     }
 
 
 }
 
-//extension ViewController: CoinManagerDelegate {
-
-//
-//    func didFailWithError(error: Error) {
-//        print(error)
-//    }
-//
-//    func didUpdatePrice(price:String, currency: String){
-//        DispatchQueue.main.async { // Correct - async implementation on different thread - so user doesn't think app crashed
-//            self.bitCoinLabel.text = price
-//            self.bitCoinLabel.text = currency
-//        }
-//
-//    }
-//}
+extension ViewController: CoinManagerDelegate{
+    func didUpdatePrice(_ coinManager: CoinManager, price: String, currency: String) {
+        
+        DispatchQueue.main.async {
+            self.bitCoinLabel.text = price
+            self.currencyLabel.text = currency
+        }
+    }
+    
+    func didFailWithError(error: Error) {
+        print(error)
+    }
+    
+        
+}
