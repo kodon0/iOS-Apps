@@ -28,27 +28,31 @@ struct CoinManager {
     }
     
     func performRequest(with urlString: String){
-
+        //        Check if string is nil
+//        print(URL(string: urlString) ?? "Nil URL")
+//        print("*\(urlString)*")
+        //        1) Create URL
         if let url = URL(string: urlString){
-
+            //        2) Create URL session
             let session = URLSession(configuration: .default)
-
+            //        3) Give session a task
             let task = session.dataTask(with: url) { (data, response, error) in
                 if error != nil {
-
+                    //            If there is an error, print it in debug console
                     print(error!)
                     self.delegate?.didFailWithError(error: error!)
-
+                    //                    Pass error to delegate
                     return
                 }
 
                 if let safeData = data{
                     let coinPrice = self.parseJSON(safeData)
                     let coinPriceString = String(format: "%.2f", coinPrice!)
-                    self.delegate?.didUpdatePrice(price: coinPriceString, currency: currency)
+                    self.delegate?.didUpdatePrice(<#CoinManager#>, price: coinPriceString, currency: currency)
                 }
                 
             }
+                    //        4) Start task
             task.resume()
         }
     }
