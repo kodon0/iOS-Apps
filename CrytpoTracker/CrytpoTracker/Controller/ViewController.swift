@@ -42,7 +42,7 @@ class ViewController: UIViewController,UIPickerViewDataSource, UIPickerViewDeleg
 }
 
 extension ViewController: CoinManagerDelegate{
-    func didUpdatePrice(_ coinManager: CoinManager, price: String, currency: String) {
+    func didUpdatePrice(price: String, currency: String) {
         
         DispatchQueue.main.async {
             self.bitCoinLabel.text = price
