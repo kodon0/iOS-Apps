@@ -40,12 +40,7 @@ struct CoinManager {
                 if let safeData = data {
                     
                     if let bitcoinPrice = self.parseJSON(safeData) {
-                        
-                        //Optional: round the price down to 2 decimal places.
                         let priceString = String(format: "%.2f", bitcoinPrice)
-                        
-                        //Call the delegate method in the delegate (ViewController) and
-                        //pass along the necessary data.
                         self.delegate?.didUpdatePrice(price: priceString, currency: currency)
                     }
                 }
