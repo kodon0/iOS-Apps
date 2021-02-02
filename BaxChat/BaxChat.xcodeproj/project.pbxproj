@@ -215,7 +215,7 @@
 				2D8072EA25C8D3D8004FD590 /* Sources */,
 				2D8072EB25C8D3D8004FD590 /* Frameworks */,
 				2D8072EC25C8D3D8004FD590 /* Resources */,
-				063E48DCEA759ADDCC837C5D /* [CP] Embed Pods Frameworks */,
+				4D6E58475218BDD1B11FF402 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -253,7 +253,7 @@
 				2D80730B25C8D3DA004FD590 /* Sources */,
 				2D80730C25C8D3DA004FD590 /* Frameworks */,
 				2D80730D25C8D3DA004FD590 /* Resources */,
-				5E135F1C1681A152D8B24A76 /* [CP] Embed Pods Frameworks */,
+				21CD0F50104D8149FD4114E6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -337,23 +337,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		063E48DCEA759ADDCC837C5D /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-BaxChat/Pods-BaxChat-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-BaxChat/Pods-BaxChat-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BaxChat/Pods-BaxChat-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		1CE1F319CAA3B0BCEF813DF7 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -374,6 +357,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		21CD0F50104D8149FD4114E6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BaxChat-BaxChatUITests/Pods-BaxChat-BaxChatUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BaxChat-BaxChatUITests/Pods-BaxChat-BaxChatUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BaxChat-BaxChatUITests/Pods-BaxChat-BaxChatUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		4C9FC16A627A41AE0243B545 /* [CP] Check Pods Manifest.lock */ = {
@@ -398,21 +398,21 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		5E135F1C1681A152D8B24A76 /* [CP] Embed Pods Frameworks */ = {
+		4D6E58475218BDD1B11FF402 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-BaxChat-BaxChatUITests/Pods-BaxChat-BaxChatUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-BaxChat/Pods-BaxChat-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-BaxChat-BaxChatUITests/Pods-BaxChat-BaxChatUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-BaxChat/Pods-BaxChat-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BaxChat-BaxChatUITests/Pods-BaxChat-BaxChatUITests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BaxChat/Pods-BaxChat-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		A5B4453704F4DAE0F2B74CB3 /* [CP] Check Pods Manifest.lock */ = {
