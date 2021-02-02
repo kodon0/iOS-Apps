@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0FB093E9F5CDA870A5A7837D /* Pods_BaxChat_BaxChatUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3026A9DF9760454EED7FC4F /* Pods_BaxChat_BaxChatUITests.framework */; };
-		2D2E87A725C90C28008E9380 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2D2E87A625C90C28008E9380 /* GoogleService-Info.plist */; };
+		2D3034EE25C929F70066BF8B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2D3034ED25C929F70066BF8B /* GoogleService-Info.plist */; };
 		2D8072F225C8D3D8004FD590 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8072F125C8D3D8004FD590 /* AppDelegate.swift */; };
 		2D8072F425C8D3D8004FD590 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8072F325C8D3D8004FD590 /* SceneDelegate.swift */; };
 		2D8072F925C8D3D8004FD590 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D8072F725C8D3D8004FD590 /* Main.storyboard */; };
@@ -47,7 +47,7 @@
 		154E75CC9DD28A156CE3A901 /* Pods-BaxChat-BaxChatUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaxChat-BaxChatUITests.debug.xcconfig"; path = "Target Support Files/Pods-BaxChat-BaxChatUITests/Pods-BaxChat-BaxChatUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		16192DA848B9A78F0265F08F /* Pods-BaxChatTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaxChatTests.release.xcconfig"; path = "Target Support Files/Pods-BaxChatTests/Pods-BaxChatTests.release.xcconfig"; sourceTree = "<group>"; };
 		2C69A2344CA1B0BDCE021EFF /* Pods_BaxChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BaxChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2D2E87A625C90C28008E9380 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		2D3034ED25C929F70066BF8B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2D8072EE25C8D3D8004FD590 /* BaxChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaxChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D8072F125C8D3D8004FD590 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2D8072F325C8D3D8004FD590 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -132,7 +132,7 @@
 				2D8072FA25C8D3DA004FD590 /* Assets.xcassets */,
 				2D8072FC25C8D3DA004FD590 /* LaunchScreen.storyboard */,
 				2D8072FF25C8D3DA004FD590 /* Info.plist */,
-				2D2E87A625C90C28008E9380 /* GoogleService-Info.plist */,
+				2D3034ED25C929F70066BF8B /* GoogleService-Info.plist */,
 			);
 			path = BaxChat;
 			sourceTree = "<group>";
@@ -314,7 +314,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D8072FE25C8D3DA004FD590 /* LaunchScreen.storyboard in Resources */,
-				2D2E87A725C90C28008E9380 /* GoogleService-Info.plist in Resources */,
+				2D3034EE25C929F70066BF8B /* GoogleService-Info.plist in Resources */,
 				2D8072FB25C8D3DA004FD590 /* Assets.xcassets in Resources */,
 				2D8072F925C8D3D8004FD590 /* Main.storyboard in Resources */,
 			);
