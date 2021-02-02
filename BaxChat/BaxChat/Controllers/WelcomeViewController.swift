@@ -27,7 +27,7 @@ class WelcomeViewController: UIViewController {
 //            charIndex += 1
 //        }
        
-        titleLabel.text = "BaxChat"
+        titleLabel.text = "BaxChat "
     }
     
 

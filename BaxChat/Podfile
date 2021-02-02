@@ -5,6 +5,8 @@ target 'BaxChat' do
 
   # Pods for BaxChat
   pod 'CLTypingLabel', '~> 0.4.0'
+  pod 'Firebase/Auth'
+  pod 'Firebase/Firestore'
   target 'BaxChatTests' do
     inherit! :search_paths
     # Pods for testing
