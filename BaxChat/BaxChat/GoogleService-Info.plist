@@ -7,7 +7,7 @@
 	<key>REVERSED_CLIENT_ID</key>
 	<string>com.googleusercontent.apps.520737654602-g5rrjrrm2tuoa4hko57k1dr98a9o96ik</string>
 	<key>API_KEY</key>
-	<string>AIzaSyBG5sbtoD_StjSNPabdxjUalHFWi0Ij5EI</string>
+	<string>API KEY</string>
 	<key>GCM_SENDER_ID</key>
 	<string>520737654602</string>
 	<key>PLIST_VERSION</key>
@@ -19,15 +19,15 @@
 	<key>STORAGE_BUCKET</key>
 	<string>baxchat-e9a8a.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
-	<false></false>
+	<false/>
 	<key>IS_ANALYTICS_ENABLED</key>
-	<false></false>
+	<false/>
 	<key>IS_APPINVITE_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>IS_GCM_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>IS_SIGNIN_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>GOOGLE_APP_ID</key>
 	<string>1:520737654602:ios:8f99aefb5e6802565363b3</string>
 </dict>
