@@ -1,0 +1,6 @@
+framework module Pods_BaxChat {
+  umbrella header "Pods-BaxChat-umbrella.h"
+
+  export *
+  module * { export * }
+}

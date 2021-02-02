@@ -1,0 +1,6 @@
+framework module Pods_BaxChat_BaxChatUITests {
+  umbrella header "Pods-BaxChat-BaxChatUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

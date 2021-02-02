@@ -1,0 +1,17 @@
+platform :ios, '13.0'
+
+target 'BaxChat' do
+  use_frameworks!
+
+  # Pods for BaxChat
+  pod 'CLTypingLabel', '~> 0.4.0'
+  target 'BaxChatTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'BaxChatUITests' do
+    # Pods for testing
+  end
+
+end
