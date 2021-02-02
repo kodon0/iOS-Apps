@@ -41,6 +41,7 @@ struct CoinManager {
                     
                     if let bitcoinPrice = self.parseJSON(safeData) {
                         let priceString = String(format: "%.2f", bitcoinPrice)
+
                         self.delegate?.didUpdatePrice(price: priceString, currency: currency)
                     }
                 }
