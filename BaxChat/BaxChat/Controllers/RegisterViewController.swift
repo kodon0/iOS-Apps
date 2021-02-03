@@ -29,14 +29,13 @@ class RegisterViewController: UIViewController {
                 print(e.localizedDescription)
                 self.showAlert(message: e.localizedDescription)
                 
-            } else {
-                // If no error, go to chat view controller via segue inside enclosure
-                self.performSegue(withIdentifier: "RegisterToChat", sender: self)
+                } else {
+                    // If no error, go to chat view controller via segue inside enclosure
+                    self.performSegue(withIdentifier: K.registerSegue, sender: self)
+                }
             }
         }
-        }
     }
-    
 }
 
 

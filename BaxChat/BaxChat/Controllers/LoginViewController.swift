@@ -10,11 +10,11 @@ import UIKit
 import Firebase
 
 class LoginViewController: UIViewController {
-
+    
     @IBOutlet weak var emailTextfield: UITextField!
     @IBOutlet weak var passwordTextfield: UITextField!
     
-//    Define the show alert function
+    //    Define the show alert function
     func showAlert(message: String) {
         let alert = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
@@ -24,12 +24,12 @@ class LoginViewController: UIViewController {
     @IBAction func loginPressed(_ sender: UIButton) {
         
         if let email = emailTextfield.text, let password = passwordTextfield.text {
-        
-        Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
-            if error != nil {
-                if let errCode = AuthErrorCode(rawValue: error!._code) {
-                //                switch statement to flip between different error codes https://firebase.google.com/docs/reference/swift/firebaseauth/api/reference/Enums/AuthErrorCode#/c:@E@FIRAuthErrorCode@FIRAuthErrorCodeInvalidCustomToken
-                    switch errCode {
+            
+            Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
+                if error != nil { //Need to ensure logic for when error IS nil
+                    if let errCode = AuthErrorCode(rawValue: error!._code) {
+                        //                switch statement to flip between different error codes https://firebase.google.com/docs/reference/swift/firebaseauth/api/reference/Enums/AuthErrorCode#/c:@E@FIRAuthErrorCode@FIRAuthErrorCodeInvalidCustomToken
+                        switch errCode {
                         case .invalidEmail:
                             print("Invalid email")
                             self.showAlert(message: "Invalid email")
@@ -46,20 +46,20 @@ class LoginViewController: UIViewController {
                             print("Incorrect password")
                             self.showAlert(message: "Incorrect password")
                         case .userDisabled:
-                             print("User banned")
-                             self.showAlert(message: "User banned")
+                            print("User banned")
+                            self.showAlert(message: "User banned")
                         case .userNotFound:
                             print("User doesn't exist")
                             self.showAlert(message: "User doesn't exist")
                         default:
                             print("Create User Error: \(error!)")
+                        }
                     }
+                } else {
+                    self.performSegue(withIdentifier: K.loginSegue, sender: self)
+                    
                 }
-            } else {
-                self.performSegue(withIdentifier: "LoginToChat", sender: self)
                 
-            }
-
             }
         }
     }
