@@ -14,6 +14,8 @@ class ChatViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var messageTextfield: UITextField!
     
+    let db = Firestore.firestore()
+    
     var messages: [Message] = [
         Message(sender: "4@6.com", body: "Ya Hozna"),
         Message(sender: "1@2.com", body: "Does Humor Belong in Music?"),
@@ -32,6 +34,20 @@ class ChatViewController: UIViewController {
     }
     
     @IBAction func sendPressed(_ sender: UIButton) {
+//                Send info to Firebase db
+        
+        if let messageBody = messageTextfield.text, let messageSender = Auth.auth().currentUser?.email{
+            db.collection(K.FStore.collectionName).addDocument(data: [K.FStore.senderField: messageSender,
+                                                                      K.FStore.bodyField: messageBody]) { (error) in
+                                                                        if let e = error{
+                                                                            print("Issue savin gdata to Firestore. Error: \(e)")
+                                                                        } else{
+                                                                            print("Data saved to firestore")
+                                                                        }
+                                                                        
+                                                                        
+            }
+        }
     }
     
     @IBAction func logOutPressed(_ sender: UIBarButtonItem) {
