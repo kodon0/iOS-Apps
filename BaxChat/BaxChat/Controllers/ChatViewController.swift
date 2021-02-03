@@ -25,6 +25,9 @@ class ChatViewController: UIViewController {
         title = K.appName
         tableView.dataSource = self //Trigger delegate methods from ChatVC
         navigationItem.hidesBackButton = true //Hides back button
+        
+//        Register custom tableview from MessageCell.xib (= nib)
+        tableView.register(UINib(nibName: K.cellNibName, bundle: nil), forCellReuseIdentifier: K.cellIdentifier)
 
     }
     
@@ -45,17 +48,15 @@ class ChatViewController: UIViewController {
 }
 
 
-//Table views work with delegation
+//Table views work with delegation - UITableViewDataSource is for populating tableviews
 extension ChatViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return messages.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: K.cellIdentifier, for: indexPath)
-        cell.textLabel?.text = "This cell!"
+        let cell = tableView.dequeueReusableCell(withIdentifier: K.cellIdentifier, for: indexPath) as! MessageCell
+        cell.label.text = messages[indexPath.row].body
         return cell
     }
-    
-    
 }
