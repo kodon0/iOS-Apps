@@ -34,8 +34,12 @@ class ChatViewController: UIViewController {
     }
     
     func loadMessages(){
-        db.collection(K.FStore.collectionName).addSnapshotListener { (querySnapshot, error) in
+        db.collection(K.FStore.collectionName)
+            .order(by: K.FStore.dateField, descending: false)
+            .addSnapshotListener { (querySnapshot, error) in
+                
             self.messages = []
+                
             if let e = error {
                 print("Error getting data from Firestore: \(e)")
             } else {
@@ -45,8 +49,9 @@ class ChatViewController: UIViewController {
                             if let messageSender = data[K.FStore.senderField] as? String, let messageBody = data[K.FStore.bodyField] as? String {
                                 let newMessage = Message(sender: messageSender, body: messageBody)
                                 self.messages.append(newMessage)
+                                
                                 DispatchQueue.main.async {
-                                self.tableView.reloadData()
+                                    self.tableView.reloadData()
                             }
                         }
                     }
