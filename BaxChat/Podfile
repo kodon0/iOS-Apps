@@ -7,6 +7,7 @@ target 'BaxChat' do
   pod 'CLTypingLabel', '~> 0.4.0'
   pod 'Firebase/Auth'
   pod 'Firebase/Firestore'
+  pod 'IQKeyboardManagerSwift'
   target 'BaxChatTests' do
     inherit! :search_paths
     # Pods for testing

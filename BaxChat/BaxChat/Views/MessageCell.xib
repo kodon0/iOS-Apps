@@ -11,7 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ReusableCell" rowHeight="75" id="Zmq-IP-tnf" customClass="MessageCell" customModule="BaxChat" customModuleProvider="target">
+        <tableViewCell userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ReusableCell" rowHeight="75" id="Zmq-IP-tnf" customClass="MessageCell" customModule="BaxChat" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="358" height="75"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Zmq-IP-tnf" id="bMS-Y0-LDj">
@@ -21,11 +21,18 @@
                     <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacingType="standard" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xZP-Hm-1nn">
                         <rect key="frame" x="10" y="10" width="338" height="55"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="YouAvatar" translatesAutoresizingMaskIntoConstraints="NO" id="XFG-wQ-vQM">
+                                <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" identifier="cr2" id="4W3-ef-cGB"/>
+                                    <constraint firstAttribute="width" constant="40" identifier="cr1" id="QKu-XS-hbn"/>
+                                </constraints>
+                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RLj-YW-D8r">
-                                <rect key="frame" x="0.0" y="0.0" width="290" height="50"/>
+                                <rect key="frame" x="48" y="0.0" width="242" height="50"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hmH-EV-5DX">
-                                        <rect key="frame" x="10" y="10" width="270" height="30"/>
+                                        <rect key="frame" x="10" y="10" width="222" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" name="BrandLightPurple"/>
                                         <nil key="highlightedColor"/>
@@ -62,6 +69,7 @@
             <viewLayoutGuide key="safeArea" id="BI3-HW-jVe"/>
             <connections>
                 <outlet property="label" destination="hmH-EV-5DX" id="aSf-WP-fwb"/>
+                <outlet property="leftImageVIew" destination="XFG-wQ-vQM" id="fxO-Zj-OVv"/>
                 <outlet property="messageBubble" destination="RLj-YW-D8r" id="9D3-Ca-G8q"/>
                 <outlet property="rightImageVIew" destination="tgc-wC-7t8" id="Ms6-ne-2Gb"/>
             </connections>
@@ -70,6 +78,7 @@
     </objects>
     <resources>
         <image name="MeAvatar" width="36" height="36"/>
+        <image name="YouAvatar" width="36" height="36"/>
         <namedColor name="BrandLightPurple">
             <color red="0.98000001907348633" green="0.9649999737739563" blue="0.99599999189376831" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
