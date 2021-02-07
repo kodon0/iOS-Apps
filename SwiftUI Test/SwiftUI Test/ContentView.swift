@@ -10,7 +10,18 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, World!")
+        
+        ZStack {
+            Color(.systemIndigo).edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+            VStack {
+                Text("SwiftUI is super cool!")
+                .font(.system(size: 50))
+                .font(.title)
+                .fontWeight(.black)
+                .foregroundColor(Color.orange)
+                    .multilineTextAlignment(.center)
+                Image("swiftui").resizable().aspectRatio(contentMode: .fit).frame(width: 200, height: 200, alignment: .center)
+            } }
     }
 }
 
