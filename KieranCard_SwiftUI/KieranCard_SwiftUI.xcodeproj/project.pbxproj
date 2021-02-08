@@ -1,0 +1,593 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2D5D4A1F25D2002D00BB1FEB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5D4A1E25D2002D00BB1FEB /* AppDelegate.swift */; };
+		2D5D4A2125D2002D00BB1FEB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5D4A2025D2002D00BB1FEB /* SceneDelegate.swift */; };
+		2D5D4A2325D2002D00BB1FEB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5D4A2225D2002D00BB1FEB /* ContentView.swift */; };
+		2D5D4A2525D2002F00BB1FEB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D5D4A2425D2002F00BB1FEB /* Assets.xcassets */; };
+		2D5D4A2825D2002F00BB1FEB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D5D4A2725D2002F00BB1FEB /* Preview Assets.xcassets */; };
+		2D5D4A2B25D2002F00BB1FEB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D5D4A2925D2002F00BB1FEB /* LaunchScreen.storyboard */; };
+		2D5D4A3625D2003000BB1FEB /* KieranCard_SwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5D4A3525D2003000BB1FEB /* KieranCard_SwiftUITests.swift */; };
+		2D5D4A4125D2003000BB1FEB /* KieranCard_SwiftUIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5D4A4025D2003000BB1FEB /* KieranCard_SwiftUIUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2D5D4A3225D2003000BB1FEB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2D5D4A1325D2002D00BB1FEB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2D5D4A1A25D2002D00BB1FEB;
+			remoteInfo = KieranCard_SwiftUI;
+		};
+		2D5D4A3D25D2003000BB1FEB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2D5D4A1325D2002D00BB1FEB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2D5D4A1A25D2002D00BB1FEB;
+			remoteInfo = KieranCard_SwiftUI;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2D5D4A1B25D2002D00BB1FEB /* KieranCard_SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KieranCard_SwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D5D4A1E25D2002D00BB1FEB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2D5D4A2025D2002D00BB1FEB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		2D5D4A2225D2002D00BB1FEB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		2D5D4A2425D2002F00BB1FEB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2D5D4A2725D2002F00BB1FEB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2D5D4A2A25D2002F00BB1FEB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2D5D4A2C25D2002F00BB1FEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2D5D4A3125D2003000BB1FEB /* KieranCard_SwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KieranCard_SwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D5D4A3525D2003000BB1FEB /* KieranCard_SwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KieranCard_SwiftUITests.swift; sourceTree = "<group>"; };
+		2D5D4A3725D2003000BB1FEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2D5D4A3C25D2003000BB1FEB /* KieranCard_SwiftUIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KieranCard_SwiftUIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D5D4A4025D2003000BB1FEB /* KieranCard_SwiftUIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KieranCard_SwiftUIUITests.swift; sourceTree = "<group>"; };
+		2D5D4A4225D2003000BB1FEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2D5D4A1825D2002D00BB1FEB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2D5D4A2E25D2003000BB1FEB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2D5D4A3925D2003000BB1FEB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2D5D4A1225D2002D00BB1FEB = {
+			isa = PBXGroup;
+			children = (
+				2D5D4A1D25D2002D00BB1FEB /* KieranCard_SwiftUI */,
+				2D5D4A3425D2003000BB1FEB /* KieranCard_SwiftUITests */,
+				2D5D4A3F25D2003000BB1FEB /* KieranCard_SwiftUIUITests */,
+				2D5D4A1C25D2002D00BB1FEB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2D5D4A1C25D2002D00BB1FEB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2D5D4A1B25D2002D00BB1FEB /* KieranCard_SwiftUI.app */,
+				2D5D4A3125D2003000BB1FEB /* KieranCard_SwiftUITests.xctest */,
+				2D5D4A3C25D2003000BB1FEB /* KieranCard_SwiftUIUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2D5D4A1D25D2002D00BB1FEB /* KieranCard_SwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				2D5D4A1E25D2002D00BB1FEB /* AppDelegate.swift */,
+				2D5D4A2025D2002D00BB1FEB /* SceneDelegate.swift */,
+				2D5D4A2225D2002D00BB1FEB /* ContentView.swift */,
+				2D5D4A2425D2002F00BB1FEB /* Assets.xcassets */,
+				2D5D4A2925D2002F00BB1FEB /* LaunchScreen.storyboard */,
+				2D5D4A2C25D2002F00BB1FEB /* Info.plist */,
+				2D5D4A2625D2002F00BB1FEB /* Preview Content */,
+			);
+			path = KieranCard_SwiftUI;
+			sourceTree = "<group>";
+		};
+		2D5D4A2625D2002F00BB1FEB /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				2D5D4A2725D2002F00BB1FEB /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		2D5D4A3425D2003000BB1FEB /* KieranCard_SwiftUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2D5D4A3525D2003000BB1FEB /* KieranCard_SwiftUITests.swift */,
+				2D5D4A3725D2003000BB1FEB /* Info.plist */,
+			);
+			path = KieranCard_SwiftUITests;
+			sourceTree = "<group>";
+		};
+		2D5D4A3F25D2003000BB1FEB /* KieranCard_SwiftUIUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2D5D4A4025D2003000BB1FEB /* KieranCard_SwiftUIUITests.swift */,
+				2D5D4A4225D2003000BB1FEB /* Info.plist */,
+			);
+			path = KieranCard_SwiftUIUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2D5D4A1A25D2002D00BB1FEB /* KieranCard_SwiftUI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2D5D4A4525D2003000BB1FEB /* Build configuration list for PBXNativeTarget "KieranCard_SwiftUI" */;
+			buildPhases = (
+				2D5D4A1725D2002D00BB1FEB /* Sources */,
+				2D5D4A1825D2002D00BB1FEB /* Frameworks */,
+				2D5D4A1925D2002D00BB1FEB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KieranCard_SwiftUI;
+			productName = KieranCard_SwiftUI;
+			productReference = 2D5D4A1B25D2002D00BB1FEB /* KieranCard_SwiftUI.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2D5D4A3025D2003000BB1FEB /* KieranCard_SwiftUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2D5D4A4825D2003000BB1FEB /* Build configuration list for PBXNativeTarget "KieranCard_SwiftUITests" */;
+			buildPhases = (
+				2D5D4A2D25D2003000BB1FEB /* Sources */,
+				2D5D4A2E25D2003000BB1FEB /* Frameworks */,
+				2D5D4A2F25D2003000BB1FEB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2D5D4A3325D2003000BB1FEB /* PBXTargetDependency */,
+			);
+			name = KieranCard_SwiftUITests;
+			productName = KieranCard_SwiftUITests;
+			productReference = 2D5D4A3125D2003000BB1FEB /* KieranCard_SwiftUITests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2D5D4A3B25D2003000BB1FEB /* KieranCard_SwiftUIUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2D5D4A4B25D2003000BB1FEB /* Build configuration list for PBXNativeTarget "KieranCard_SwiftUIUITests" */;
+			buildPhases = (
+				2D5D4A3825D2003000BB1FEB /* Sources */,
+				2D5D4A3925D2003000BB1FEB /* Frameworks */,
+				2D5D4A3A25D2003000BB1FEB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2D5D4A3E25D2003000BB1FEB /* PBXTargetDependency */,
+			);
+			name = KieranCard_SwiftUIUITests;
+			productName = KieranCard_SwiftUIUITests;
+			productReference = 2D5D4A3C25D2003000BB1FEB /* KieranCard_SwiftUIUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2D5D4A1325D2002D00BB1FEB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1160;
+				LastUpgradeCheck = 1160;
+				ORGANIZATIONNAME = baxmanduppa;
+				TargetAttributes = {
+					2D5D4A1A25D2002D00BB1FEB = {
+						CreatedOnToolsVersion = 11.6;
+					};
+					2D5D4A3025D2003000BB1FEB = {
+						CreatedOnToolsVersion = 11.6;
+						TestTargetID = 2D5D4A1A25D2002D00BB1FEB;
+					};
+					2D5D4A3B25D2003000BB1FEB = {
+						CreatedOnToolsVersion = 11.6;
+						TestTargetID = 2D5D4A1A25D2002D00BB1FEB;
+					};
+				};
+			};
+			buildConfigurationList = 2D5D4A1625D2002D00BB1FEB /* Build configuration list for PBXProject "KieranCard_SwiftUI" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2D5D4A1225D2002D00BB1FEB;
+			productRefGroup = 2D5D4A1C25D2002D00BB1FEB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2D5D4A1A25D2002D00BB1FEB /* KieranCard_SwiftUI */,
+				2D5D4A3025D2003000BB1FEB /* KieranCard_SwiftUITests */,
+				2D5D4A3B25D2003000BB1FEB /* KieranCard_SwiftUIUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2D5D4A1925D2002D00BB1FEB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2D5D4A2B25D2002F00BB1FEB /* LaunchScreen.storyboard in Resources */,
+				2D5D4A2825D2002F00BB1FEB /* Preview Assets.xcassets in Resources */,
+				2D5D4A2525D2002F00BB1FEB /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2D5D4A2F25D2003000BB1FEB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2D5D4A3A25D2003000BB1FEB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2D5D4A1725D2002D00BB1FEB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2D5D4A1F25D2002D00BB1FEB /* AppDelegate.swift in Sources */,
+				2D5D4A2125D2002D00BB1FEB /* SceneDelegate.swift in Sources */,
+				2D5D4A2325D2002D00BB1FEB /* ContentView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2D5D4A2D25D2003000BB1FEB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2D5D4A3625D2003000BB1FEB /* KieranCard_SwiftUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2D5D4A3825D2003000BB1FEB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2D5D4A4125D2003000BB1FEB /* KieranCard_SwiftUIUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2D5D4A3325D2003000BB1FEB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2D5D4A1A25D2002D00BB1FEB /* KieranCard_SwiftUI */;
+			targetProxy = 2D5D4A3225D2003000BB1FEB /* PBXContainerItemProxy */;
+		};
+		2D5D4A3E25D2003000BB1FEB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2D5D4A1A25D2002D00BB1FEB /* KieranCard_SwiftUI */;
+			targetProxy = 2D5D4A3D25D2003000BB1FEB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2D5D4A2925D2002F00BB1FEB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2D5D4A2A25D2002F00BB1FEB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2D5D4A4325D2003000BB1FEB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2D5D4A4425D2003000BB1FEB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2D5D4A4625D2003000BB1FEB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"KieranCard_SwiftUI/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = KieranCard_SwiftUI/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "co.baxmanduppa.KieranCard-SwiftUI";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2D5D4A4725D2003000BB1FEB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"KieranCard_SwiftUI/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = KieranCard_SwiftUI/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "co.baxmanduppa.KieranCard-SwiftUI";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		2D5D4A4925D2003000BB1FEB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = KieranCard_SwiftUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "co.baxmanduppa.KieranCard-SwiftUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KieranCard_SwiftUI.app/KieranCard_SwiftUI";
+			};
+			name = Debug;
+		};
+		2D5D4A4A25D2003000BB1FEB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = KieranCard_SwiftUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "co.baxmanduppa.KieranCard-SwiftUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KieranCard_SwiftUI.app/KieranCard_SwiftUI";
+			};
+			name = Release;
+		};
+		2D5D4A4C25D2003000BB1FEB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = KieranCard_SwiftUIUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "co.baxmanduppa.KieranCard-SwiftUIUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = KieranCard_SwiftUI;
+			};
+			name = Debug;
+		};
+		2D5D4A4D25D2003000BB1FEB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = KieranCard_SwiftUIUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "co.baxmanduppa.KieranCard-SwiftUIUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = KieranCard_SwiftUI;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D5D4A1625D2002D00BB1FEB /* Build configuration list for PBXProject "KieranCard_SwiftUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2D5D4A4325D2003000BB1FEB /* Debug */,
+				2D5D4A4425D2003000BB1FEB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D5D4A4525D2003000BB1FEB /* Build configuration list for PBXNativeTarget "KieranCard_SwiftUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2D5D4A4625D2003000BB1FEB /* Debug */,
+				2D5D4A4725D2003000BB1FEB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D5D4A4825D2003000BB1FEB /* Build configuration list for PBXNativeTarget "KieranCard_SwiftUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2D5D4A4925D2003000BB1FEB /* Debug */,
+				2D5D4A4A25D2003000BB1FEB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D5D4A4B25D2003000BB1FEB /* Build configuration list for PBXNativeTarget "KieranCard_SwiftUIUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2D5D4A4C25D2003000BB1FEB /* Debug */,
+				2D5D4A4D25D2003000BB1FEB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2D5D4A1325D2002D00BB1FEB /* Project object */;
+}
