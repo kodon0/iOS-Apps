@@ -13,10 +13,18 @@ struct ContentView: View {
         ZStack{
             Color(UIColor(red: 0.88, green: 0.44, blue: 0.33, alpha: 0.9))
                 .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
-            Text("Kieran O'Donnell")
-                .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
-                .bold()
-                .foregroundColor(.white)
+            VStack {
+                
+                
+                Image(/*@START_MENU_TOKEN@*/ /*@PLACEHOLDER=Image Name@*/"Image Name"/*@END_MENU_TOKEN@*/)
+                Text("Kieran O'Donnell")
+                    .font(Font.custom("Ubuntu-Medium", size: 30))
+                    .bold()
+                    .foregroundColor(.white)
+                Text("iOS Developer, Data Scientist")
+                    .foregroundColor(.white)
+                    .font(Font.custom("Ubuntu-Medium", size: 15))
+            }
         }
     }
 }

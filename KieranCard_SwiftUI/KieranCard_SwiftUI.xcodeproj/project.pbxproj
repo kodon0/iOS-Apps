@@ -15,6 +15,15 @@
 		2D5D4A2B25D2002F00BB1FEB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D5D4A2925D2002F00BB1FEB /* LaunchScreen.storyboard */; };
 		2D5D4A3625D2003000BB1FEB /* KieranCard_SwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5D4A3525D2003000BB1FEB /* KieranCard_SwiftUITests.swift */; };
 		2D5D4A4125D2003000BB1FEB /* KieranCard_SwiftUIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5D4A4025D2003000BB1FEB /* KieranCard_SwiftUIUITests.swift */; };
+		2D5D4A5725D204D500BB1FEB /* Ubuntu-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2D5D4A4F25D204D400BB1FEB /* Ubuntu-Medium.ttf */; };
+		2D5D4A5825D204D500BB1FEB /* Ubuntu-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2D5D4A5025D204D500BB1FEB /* Ubuntu-Italic.ttf */; };
+		2D5D4A5925D204D500BB1FEB /* Ubuntu-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2D5D4A5125D204D500BB1FEB /* Ubuntu-Light.ttf */; };
+		2D5D4A5A25D204D500BB1FEB /* Ubuntu-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2D5D4A5225D204D500BB1FEB /* Ubuntu-Bold.ttf */; };
+		2D5D4A5B25D204D500BB1FEB /* Ubuntu-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2D5D4A5325D204D500BB1FEB /* Ubuntu-LightItalic.ttf */; };
+		2D5D4A5C25D204D500BB1FEB /* Ubuntu-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2D5D4A5425D204D500BB1FEB /* Ubuntu-MediumItalic.ttf */; };
+		2D5D4A5D25D204D500BB1FEB /* Ubuntu-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2D5D4A5525D204D500BB1FEB /* Ubuntu-Regular.ttf */; };
+		2D5D4A5E25D204D500BB1FEB /* Ubuntu-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2D5D4A5625D204D500BB1FEB /* Ubuntu-BoldItalic.ttf */; };
+		2D5D4A6025D2089600BB1FEB /* 2150BB22-68E2-4A96-9B4A-1A27750C89BC_1_201_a.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 2D5D4A5F25D2089600BB1FEB /* 2150BB22-68E2-4A96-9B4A-1A27750C89BC_1_201_a.jpeg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +58,15 @@
 		2D5D4A3C25D2003000BB1FEB /* KieranCard_SwiftUIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KieranCard_SwiftUIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D5D4A4025D2003000BB1FEB /* KieranCard_SwiftUIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KieranCard_SwiftUIUITests.swift; sourceTree = "<group>"; };
 		2D5D4A4225D2003000BB1FEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2D5D4A4F25D204D400BB1FEB /* Ubuntu-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Ubuntu-Medium.ttf"; path = "Ubuntu/Ubuntu-Medium.ttf"; sourceTree = SOURCE_ROOT; };
+		2D5D4A5025D204D500BB1FEB /* Ubuntu-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Ubuntu-Italic.ttf"; path = "Ubuntu/Ubuntu-Italic.ttf"; sourceTree = SOURCE_ROOT; };
+		2D5D4A5125D204D500BB1FEB /* Ubuntu-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Ubuntu-Light.ttf"; path = "Ubuntu/Ubuntu-Light.ttf"; sourceTree = SOURCE_ROOT; };
+		2D5D4A5225D204D500BB1FEB /* Ubuntu-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Ubuntu-Bold.ttf"; path = "Ubuntu/Ubuntu-Bold.ttf"; sourceTree = SOURCE_ROOT; };
+		2D5D4A5325D204D500BB1FEB /* Ubuntu-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Ubuntu-LightItalic.ttf"; path = "Ubuntu/Ubuntu-LightItalic.ttf"; sourceTree = SOURCE_ROOT; };
+		2D5D4A5425D204D500BB1FEB /* Ubuntu-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Ubuntu-MediumItalic.ttf"; path = "Ubuntu/Ubuntu-MediumItalic.ttf"; sourceTree = SOURCE_ROOT; };
+		2D5D4A5525D204D500BB1FEB /* Ubuntu-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Ubuntu-Regular.ttf"; path = "Ubuntu/Ubuntu-Regular.ttf"; sourceTree = SOURCE_ROOT; };
+		2D5D4A5625D204D500BB1FEB /* Ubuntu-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Ubuntu-BoldItalic.ttf"; path = "Ubuntu/Ubuntu-BoldItalic.ttf"; sourceTree = SOURCE_ROOT; };
+		2D5D4A5F25D2089600BB1FEB /* 2150BB22-68E2-4A96-9B4A-1A27750C89BC_1_201_a.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "2150BB22-68E2-4A96-9B4A-1A27750C89BC_1_201_a.jpeg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,10 +117,12 @@
 		2D5D4A1D25D2002D00BB1FEB /* KieranCard_SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				2D5D4A4E25D204A300BB1FEB /* Fo */,
 				2D5D4A1E25D2002D00BB1FEB /* AppDelegate.swift */,
 				2D5D4A2025D2002D00BB1FEB /* SceneDelegate.swift */,
 				2D5D4A2225D2002D00BB1FEB /* ContentView.swift */,
 				2D5D4A2425D2002F00BB1FEB /* Assets.xcassets */,
+				2D5D4A5F25D2089600BB1FEB /* 2150BB22-68E2-4A96-9B4A-1A27750C89BC_1_201_a.jpeg */,
 				2D5D4A2925D2002F00BB1FEB /* LaunchScreen.storyboard */,
 				2D5D4A2C25D2002F00BB1FEB /* Info.plist */,
 				2D5D4A2625D2002F00BB1FEB /* Preview Content */,
@@ -134,6 +154,21 @@
 				2D5D4A4225D2003000BB1FEB /* Info.plist */,
 			);
 			path = KieranCard_SwiftUIUITests;
+			sourceTree = "<group>";
+		};
+		2D5D4A4E25D204A300BB1FEB /* Fo */ = {
+			isa = PBXGroup;
+			children = (
+				2D5D4A5225D204D500BB1FEB /* Ubuntu-Bold.ttf */,
+				2D5D4A5625D204D500BB1FEB /* Ubuntu-BoldItalic.ttf */,
+				2D5D4A5025D204D500BB1FEB /* Ubuntu-Italic.ttf */,
+				2D5D4A5125D204D500BB1FEB /* Ubuntu-Light.ttf */,
+				2D5D4A5325D204D500BB1FEB /* Ubuntu-LightItalic.ttf */,
+				2D5D4A4F25D204D400BB1FEB /* Ubuntu-Medium.ttf */,
+				2D5D4A5425D204D500BB1FEB /* Ubuntu-MediumItalic.ttf */,
+				2D5D4A5525D204D500BB1FEB /* Ubuntu-Regular.ttf */,
+			);
+			path = Fo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,9 +275,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D5D4A6025D2089600BB1FEB /* 2150BB22-68E2-4A96-9B4A-1A27750C89BC_1_201_a.jpeg in Resources */,
+				2D5D4A5B25D204D500BB1FEB /* Ubuntu-LightItalic.ttf in Resources */,
 				2D5D4A2B25D2002F00BB1FEB /* LaunchScreen.storyboard in Resources */,
 				2D5D4A2825D2002F00BB1FEB /* Preview Assets.xcassets in Resources */,
+				2D5D4A5725D204D500BB1FEB /* Ubuntu-Medium.ttf in Resources */,
+				2D5D4A5825D204D500BB1FEB /* Ubuntu-Italic.ttf in Resources */,
+				2D5D4A5A25D204D500BB1FEB /* Ubuntu-Bold.ttf in Resources */,
+				2D5D4A5925D204D500BB1FEB /* Ubuntu-Light.ttf in Resources */,
+				2D5D4A5E25D204D500BB1FEB /* Ubuntu-BoldItalic.ttf in Resources */,
 				2D5D4A2525D2002F00BB1FEB /* Assets.xcassets in Resources */,
+				2D5D4A5D25D204D500BB1FEB /* Ubuntu-Regular.ttf in Resources */,
+				2D5D4A5C25D204D500BB1FEB /* Ubuntu-MediumItalic.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
