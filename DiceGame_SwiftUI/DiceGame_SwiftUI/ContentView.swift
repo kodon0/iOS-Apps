@@ -10,12 +10,46 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, World!")
+                ZStack{
+            Color(UIColor(red: 0.88, green: 0.44, blue: 0.33, alpha: 0.9))
+                .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+                    VStack {
+                        HStack {
+                            DiceView(n: 4)
+                            DiceView(n: 4)
+                        }
+                    .padding()
+                        Button(action: {
+                            
+                        }) {
+                            Text("Let's roll!")
+                                .font(.system(size: 40))
+                                .fontWeight(.bold)
+                                .foregroundColor(.red)
+                            .padding()
+                        }
+                        .background(Color(.white))
+                    }
+  
+                    
+        }
     }
 }
+
+struct DiceView: View {
+    let n: Int
+    var body: some View {
+        Image("dice\(n)")
+            .resizable()
+            .aspectRatio(1, contentMode: .fit)
+            .padding()
+    }
+}
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
     }
 }
+
