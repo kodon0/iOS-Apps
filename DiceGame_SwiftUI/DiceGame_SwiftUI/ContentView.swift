@@ -14,13 +14,14 @@ struct ContentView: View {
             Color(UIColor(red: 0.88, green: 0.44, blue: 0.33, alpha: 0.9))
                 .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
                     VStack {
+                        Spacer()
                         HStack {
                             DiceView(n: 4)
                             DiceView(n: 4)
                         }
                     .padding()
+                        Spacer()
                         Button(action: {
-                            
                         }) {
                             Text("Let's roll!")
                                 .font(.system(size: 40))
@@ -29,9 +30,8 @@ struct ContentView: View {
                             .padding()
                         }
                         .background(Color(.white))
+                        Spacer()
                     }
-  
-                    
         }
     }
 }
