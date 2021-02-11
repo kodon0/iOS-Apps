@@ -8,7 +8,10 @@
 
 import SwiftUI
 
+
 struct ContentView: View {
+    @ State var rhdNum = 4
+    @ State var lhdNum = 5
     var body: some View {
                 ZStack{
             Color(UIColor(red: 0.88, green: 0.44, blue: 0.33, alpha: 0.9))
@@ -16,12 +19,14 @@ struct ContentView: View {
                     VStack {
                         Spacer()
                         HStack {
-                            DiceView(n: 4)
-                            DiceView(n: 4)
+                            DiceView(n: rhdNum)
+                            DiceView(n: lhdNum)
                         }
                     .padding()
                         Spacer()
                         Button(action: {
+                            self.rhdNum = Int.random(in: 1...6)
+                            self.lhdNum = Int.random(in: 1...6)
                         }) {
                             Text("Let's roll!")
                                 .font(.system(size: 40))
