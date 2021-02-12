@@ -26,3 +26,14 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+
+struct Post: Identifiable {
+    let id: String
+    let title: String
+}
+
+let posts = [
+    Post(id: "1", title: "first post")
+    Post(id: "2", title: "second post")
+    Post(id: "3", title: "third post")
+]
