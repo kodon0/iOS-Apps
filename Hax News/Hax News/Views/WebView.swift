@@ -11,6 +11,7 @@ import WebKit
 import SwiftUI
 
 //Struct to show url content
+//Need to create own WebView (subject to Swift UI updates...)
 struct WebView: UIViewRepresentable {
     
     let urlString: String?
