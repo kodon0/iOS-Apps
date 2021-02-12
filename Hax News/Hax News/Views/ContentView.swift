@@ -15,9 +15,15 @@ struct ContentView: View {
 
     var body: some View {
         NavigationView {
-            List(networkManager.posts, rowContent: { (post) -> Text in
-            Text(post.title)
-            })
+            List(networkManager.posts) { post in
+                NavigationLink(destination: DetailView(url:post.url)) {
+                HStack {
+                    Text(String(post.points))
+                    Text(post.title)
+                }
+                }
+    
+            }
             .navigationBarTitle("Hax News")
         }
         .onAppear {
