@@ -9,14 +9,19 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+//    Note  difference between Observed and Observable!
+    @ ObservedObject var networkManager = NetworkManager()
+
     var body: some View {
         NavigationView {
-            List{
-            Text("Hello, World!")
-            Text("eread, World!")
-            Text("Hello, Worefdwdfwld!")
-                }
+            List(networkManager.posts, rowContent: { (post) -> Text in
+            Text(post.title)
+            })
             .navigationBarTitle("Hax News")
+        }
+        .onAppear {
+            self.networkManager.fetchData()
         }
     }
 }
@@ -27,13 +32,10 @@ struct ContentView_Previews: PreviewProvider {
     }
 }
 
-struct Post: Identifiable {
-    let id: String
-    let title: String
-}
 
-let posts = [
-    Post(id: "1", title: "first post")
-    Post(id: "2", title: "second post")
-    Post(id: "3", title: "third post")
-]
+
+//let posts = [
+//    Post(id: "1", title: "yabadabadoo post"),
+//    Post(id: "2", title: "second post"),
+//    Post(id: "3", title: "third post"),
+//]
