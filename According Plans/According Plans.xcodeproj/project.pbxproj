@@ -24,6 +24,7 @@
 		2DD865CD25DA280B00675D71 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2DD865D025DA280B00675D71 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2DD865D225DA280B00675D71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2DD865D825DA328A00675D71 /* According Plans.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "According Plans.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +57,7 @@
 		2DD865C325DA280800675D71 /* According Plans */ = {
 			isa = PBXGroup;
 			children = (
+				2DD865D825DA328A00675D71 /* According Plans.entitlements */,
 				2DD865C425DA280800675D71 /* AppDelegate.swift */,
 				2DD865C625DA280800675D71 /* SceneDelegate.swift */,
 				2DD865C825DA280800675D71 /* ViewController.swift */,
@@ -284,6 +286,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "According Plans/According Plans.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "According Plans/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -292,6 +295,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "co.baxmanduppa.According-Plans";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -301,6 +305,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "According Plans/According Plans.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "According Plans/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -309,6 +314,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "co.baxmanduppa.According-Plans";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
