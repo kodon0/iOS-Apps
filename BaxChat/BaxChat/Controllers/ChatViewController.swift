@@ -96,7 +96,7 @@ class ChatViewController: UIViewController {
     
 }
 
-
+    // MARK: - TableView DataScource Methods
 //Table views work with delegation - UITableViewDataSource is for populating tableviews
 extension ChatViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

@@ -17,6 +17,7 @@ class TodoListViewController: UITableViewController {
         // Do any additional setup after loading the view.
     }
 
+    // MARK: - TableView DataScource Methods
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return itemArray.count
@@ -29,3 +30,4 @@ class TodoListViewController: UITableViewController {
     }
 }
 
+    // MARK: - TableView Delegate Methods
