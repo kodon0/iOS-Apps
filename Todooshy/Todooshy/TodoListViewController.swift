@@ -10,11 +10,19 @@ import UIKit
 
 class TodoListViewController: UITableViewController {
     
+    let defaults = UserDefaults.standard
+    
     var itemArray = ["Cuddle Jessie", "Give Jessie a mlem", "Cook a nice dinner for Jessie"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        // Load up modified items array
+        
+        if let items = defaults.array(forKey: "TodoListArray") as? [String]{
+            itemArray = items
+        }
     }
 
     // MARK: - TableView DataScource Methods
@@ -55,6 +63,9 @@ class TodoListViewController: UITableViewController {
             
             // Append new item to array
             self.itemArray.append(textField.text!)
+            
+            // Save new item using UserDefaults
+            self.defaults.set(self.itemArray, forKey: "TodoListArray")
             
             // Reloads the data with new items
             self.tableView.reloadData()
