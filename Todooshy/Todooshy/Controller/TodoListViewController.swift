@@ -39,7 +39,7 @@ class TodoListViewController: UITableViewController {
         loadItems()
 
 //       if let items = defaults.array(forKey: "TodoListArray") as? [Item]{
-//        itemArray = items
+//        itemArray = items <- this is from UserDefaults! Kepeing for posterity
 //     }
     }
 

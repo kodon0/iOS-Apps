@@ -11,7 +11,6 @@
 		2DD865E625DB61C500675D71 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD865E525DB61C500675D71 /* AppDelegate.swift */; };
 		2DD865EA25DB61C500675D71 /* TodoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD865E925DB61C500675D71 /* TodoListViewController.swift */; };
 		2DD865ED25DB61C500675D71 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DD865EB25DB61C500675D71 /* Main.storyboard */; };
-		2DD865F025DB61C500675D71 /* Todooshy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2DD865EE25DB61C500675D71 /* Todooshy.xcdatamodeld */; };
 		2DD865F225DB61C800675D71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DD865F125DB61C800675D71 /* Assets.xcassets */; };
 		2DD865F525DB61C800675D71 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DD865F325DB61C800675D71 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -22,7 +21,6 @@
 		2DD865E525DB61C500675D71 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2DD865E925DB61C500675D71 /* TodoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListViewController.swift; sourceTree = "<group>"; };
 		2DD865EC25DB61C500675D71 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		2DD865EF25DB61C500675D71 /* Todooshy.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Todooshy.xcdatamodel; sourceTree = "<group>"; };
 		2DD865F125DB61C800675D71 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2DD865F425DB61C800675D71 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2DD865F625DB61C800675D71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -89,7 +87,6 @@
 				2DD865F125DB61C800675D71 /* Assets.xcassets */,
 				2DD865F325DB61C800675D71 /* LaunchScreen.storyboard */,
 				2DD865F625DB61C800675D71 /* Info.plist */,
-				2DD865EE25DB61C500675D71 /* Todooshy.xcdatamodeld */,
 			);
 			path = Todooshy;
 			sourceTree = "<group>";
@@ -168,7 +165,6 @@
 				2DAA973525DC7671001D0F5D /* Item.swift in Sources */,
 				2DD865EA25DB61C500675D71 /* TodoListViewController.swift in Sources */,
 				2DD865E625DB61C500675D71 /* AppDelegate.swift in Sources */,
-				2DD865F025DB61C500675D71 /* Todooshy.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -364,19 +360,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		2DD865EE25DB61C500675D71 /* Todooshy.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				2DD865EF25DB61C500675D71 /* Todooshy.xcdatamodel */,
-			);
-			currentVersion = 2DD865EF25DB61C500675D71 /* Todooshy.xcdatamodel */;
-			path = Todooshy.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 2DD865DA25DB61C500675D71 /* Project object */;
 }
