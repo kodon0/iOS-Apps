@@ -7,36 +7,28 @@
 //
 
 import UIKit
+import CoreData
 
 class TodoListViewController: UITableViewController {
     
     
     var itemArray = [Item]()
-    let dataFilePath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first?.appendingPathComponent("Items.plist")
+
+    
+    // This gets Context from AppDelegate class
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
         
-        
-        print(dataFilePath)
+//        print to show directory of SQLite database
+        print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask))
         
         // Load up modified items array
         
-//        let newItem = Item()
-//        newItem.title = "Mlem Jessie!"
-//        itemArray.append(newItem)
-//
-//        let newItem2 = Item()
-//        newItem2.title = "Pooo!"
-//        itemArray.append(newItem2)
-//
-//        let newItem3 = Item()
-//        newItem3.title = "Peepee!"
-//        itemArray.append(newItem3)
-
-        loadItems()
+//        loadItems()
 
 //       if let items = defaults.array(forKey: "TodoListArray") as? [Item]{
 //        itemArray = items <- this is from UserDefaults! Kepeing for posterity
@@ -86,10 +78,11 @@ class TodoListViewController: UITableViewController {
             // What heppens when user clicks Add Item button
             print("Action success!")
             
-            // Append new item to array
+            // Append new item to array with new addition for CoreData -> gets context
             
-            let newItem = Item()
+            let newItem = Item(context: self.context)
             newItem.title = textField.text!
+            newItem.done = false
             self.itemArray.append(newItem)
             
 //            Save items from defined method
@@ -108,28 +101,26 @@ class TodoListViewController: UITableViewController {
     //MARK: - Save and load data methods
     
     func saveItems() {
-        // Define encoding
-        let encoder = PropertyListEncoder()
         
+        // Get context.save method from AppDelegate.saveContext()
         do {
-            let data = try encoder.encode(itemArray)
-            try data.write(to: dataFilePath!)
+            try context.save()
         } catch {
-            print("Error encoding item array: \(error)")
+            print("Error saving Context: \(error)")
         }
         
         // Reloads the data with new items
         self.tableView.reloadData()
     }
     
-    func loadItems() {
-        if let data = try? Data(contentsOf: dataFilePath!){
-            let decoder = PropertyListDecoder()
-            do {
-             itemArray = try decoder.decode([Item].self, from: data)
-        } catch {
-            print("Error decoding array: \(error)")
-        }
-        }
-    }
+//    func loadItems() {
+//        if let data = try? Data(contentsOf: dataFilePath!){
+//            let decoder = PropertyListDecoder()
+//            do {
+//             itemArray = try decoder.decode([Item].self, from: data)
+//        } catch {
+//            print("Error decoding array: \(error)")
+//        }
+//        }
+//    }
 }
