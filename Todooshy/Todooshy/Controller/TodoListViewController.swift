@@ -58,7 +58,7 @@ class TodoListViewController: UITableViewController {
         print(itemArray[indexPath.row].title)
         print(!itemArray[indexPath.row].done)
 
-//        Note ordering - must delete from context first! Beloe will delete data from app and db
+//        Note ordering - must delete from context first! Below will delete data from app and db
 //        context.delete(itemArray[indexPath.row])
 //        itemArray.remove(at: indexPath.row)
         
@@ -115,13 +115,48 @@ class TodoListViewController: UITableViewController {
         self.tableView.reloadData()
     }
     
-    func loadItems() {
-        // Must specifiy data type as there is a lot of logic involved
-        let request: NSFetchRequest<Item> = Item.fetchRequest()
+    func loadItems(with request: NSFetchRequest<Item> = Item.fetchRequest()) {
+        // Must specifiy data type as there is a lot of logic involved.
+        // Added default value (Item.fetchRequest) and required input as this is reused
+        // let request: NSFetchRequest<Item> = Item.fetchRequest()
         do {
             itemArray = try context.fetch(request)
         } catch {
             print("Error fetching data from context: \(error)")
         }
    }
+    
+}
+    //MARK: - Extensions
+
+extension TodoListViewController: UISearchBarDelegate {
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        // Defines delegate methods for search bar
+        let request : NSFetchRequest<Item> = Item.fetchRequest()
+        
+        // Querying data bases:
+        // This can be found in NSPredicate cheat sheet -> syntax is like regex x SQL
+        let predicate = NSPredicate(format: "title CONTAINS[cd] %@", searchBar.text!)
+        request.predicate = predicate
+        
+        // Define a sorting descriptor -> for ascending alphabetical order for title
+        let sortDescriptor = NSSortDescriptor(key: "title", ascending: true)
+        request.sortDescriptors = [sortDescriptor]
+        
+        // Above can be refactored - but keeping due to clarity...
+        
+        loadItems(with: request)
+        
+//        Removed following in lieu of loadItems(with: request) do {
+//            itemArray = try context.fetch(request)
+//        } catch {
+//            print("Could not complete search: \(error)")
+//        }
+//
+        tableView.reloadData()
+        
+        
+    func searchBar(
+    }
 }
