@@ -28,7 +28,7 @@ class TodoListViewController: UITableViewController {
         
         // Load up modified items array
         
-//        loadItems()
+        loadItems()
 
 //       if let items = defaults.array(forKey: "TodoListArray") as? [Item]{
 //        itemArray = items <- this is from UserDefaults! Kepeing for posterity
@@ -113,14 +113,13 @@ class TodoListViewController: UITableViewController {
         self.tableView.reloadData()
     }
     
-//    func loadItems() {
-//        if let data = try? Data(contentsOf: dataFilePath!){
-//            let decoder = PropertyListDecoder()
-//            do {
-//             itemArray = try decoder.decode([Item].self, from: data)
-//        } catch {
-//            print("Error decoding array: \(error)")
-//        }
-//        }
-//    }
+    func loadItems() {
+        // Must specifiy data type as there is a lot of logic involved
+        let request: NSFetchRequest<Item> = Item.fetchRequest()
+        do {
+            itemArray = try context.fetch(request)
+        } catch {
+            print("Error fetching data from context: \(error)")
+        }
+   }
 }
