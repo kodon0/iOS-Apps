@@ -48,7 +48,6 @@ class TodoListViewController: UITableViewController {
         let item = itemArray[indexPath.row]
         cell.textLabel?.text = item.title
         
-//
         cell.accessoryType = item.done ? .checkmark: .none
         return cell
     }
@@ -58,11 +57,14 @@ class TodoListViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print(itemArray[indexPath.row].title)
         print(!itemArray[indexPath.row].done)
-        tableView.deselectRow(at: indexPath, animated: true)
+
+//        Note ordering - must delete from context first! Beloe will delete data from app and db
+//        context.delete(itemArray[indexPath.row])
+//        itemArray.remove(at: indexPath.row)
         
 //        Setting done status to be opposite of what it is currently
         itemArray[indexPath.row].done = !itemArray[indexPath.row].done
-//            Save items from defined method
+//            Save items from defined method (i.e. Update and commit)
         saveItems()
         
         tableView.deselectRow(at: indexPath, animated: true)
