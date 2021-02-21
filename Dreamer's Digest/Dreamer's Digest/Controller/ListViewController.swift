@@ -18,6 +18,7 @@ class ListViewController: UITableViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        loadItems()
         // Do any additional setup after loading the view.
     }
 
@@ -33,6 +34,40 @@ class ListViewController: UITableViewController{
         let title = dreamArray[indexPath.row]
         cell.textLabel?.text = title.dreamTitle
         return cell
+    }
+    
+    //MARK: - Define TableView Delegate Methods
+    
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "goToPage", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destinationVC = segue.destination as! PageViewController
+        if let indexPath = tableView.indexPathForSelectedRow{
+            destinationVC.selectedCategory = dreamArray[indexPath.row]
+        }
+    }
+    
+    //MARK: - Define Data Manipulation Methods
+    
+     func saveItems() {
+         
+         do {
+             try context.save()
+         } catch {
+             print("Error saving Context: \(error)")
+         }
+         self.tableView.reloadData()
+     }
+     
+     func loadItems(with request: NSFetchRequest<ItemCategory> = ItemCategory.fetchRequest()) {
+         do {
+             categoryArray = try context.fetch(request)
+         } catch {
+             print("Error fetching data from context: \(error)")
+         }
     }
     
     //MARK: - Add new categories
