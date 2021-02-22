@@ -14,6 +14,7 @@
 		2DC77B7225DF1DCD0077A80F /* Dreamer_s_Digest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2DC77B7025DF1DCD0077A80F /* Dreamer_s_Digest.xcdatamodeld */; };
 		2DC77B7425DF1DCF0077A80F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DC77B7325DF1DCF0077A80F /* Assets.xcassets */; };
 		2DC77B7725DF1DCF0077A80F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DC77B7525DF1DCF0077A80F /* LaunchScreen.storyboard */; };
+		2DE00E7825E332CE00054C30 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE00E7725E332CE00054C30 /* PageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		2DC77B7325DF1DCF0077A80F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2DC77B7625DF1DCF0077A80F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2DC77B7825DF1DCF0077A80F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2DE00E7725E332CE00054C30 /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +53,7 @@
 			isa = PBXGroup;
 			children = (
 				2DC77B6B25DF1DCD0077A80F /* ListViewController.swift */,
+				2DE00E7725E332CE00054C30 /* PageViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -166,6 +169,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2DC77B6C25DF1DCD0077A80F /* ListViewController.swift in Sources */,
+				2DE00E7825E332CE00054C30 /* PageViewController.swift in Sources */,
 				2DC77B6825DF1DCD0077A80F /* AppDelegate.swift in Sources */,
 				2DC77B7225DF1DCD0077A80F /* Dreamer_s_Digest.xcdatamodeld in Sources */,
 				2DC77B6A25DF1DCD0077A80F /* SceneDelegate.swift in Sources */,

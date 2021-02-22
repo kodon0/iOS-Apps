@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="16119" systemVersion="19H15" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="Dream" representedClassName=".Dream" syncable="YES" codeGenerationType="class">
-        <attribute name="dreamTitle" attributeType="String"/>
+    <entity name="DreamCategory" representedClassName=".DreamCategory" syncable="YES" codeGenerationType="class">
+        <attribute name="name" attributeType="String"/>
+        <relationship name="content" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DreamContent" inverseName="parentCategory" inverseEntity="DreamContent"/>
+    </entity>
+    <entity name="DreamContent" representedClassName="DreamContent" syncable="YES" codeGenerationType="class">
+        <attribute name="dreamContent" attributeType="String"/>
+        <relationship name="parentCategory" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="DreamCategory" inverseName="content" inverseEntity="DreamCategory"/>
     </entity>
     <elements>
-        <element name="Dream" positionX="-63" positionY="-18" width="128" height="58"/>
+        <element name="DreamCategory" positionX="-63" positionY="-18" width="128" height="73"/>
+        <element name="DreamContent" positionX="210.96875" positionY="-39.99609375" width="128" height="73"/>
     </elements>
 </model>

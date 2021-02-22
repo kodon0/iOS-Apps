@@ -12,7 +12,7 @@ import CoreData
 class ListViewController: UITableViewController{
     
     
-    var dreamArray = [Dream]()
+    var dreamArray = [DreamCategory]()
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
@@ -32,7 +32,7 @@ class ListViewController: UITableViewController{
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "DreamTitleCell", for: indexPath)
         let title = dreamArray[indexPath.row]
-        cell.textLabel?.text = title.dreamTitle
+        cell.textLabel?.text = title.name
         return cell
     }
     
@@ -46,7 +46,7 @@ class ListViewController: UITableViewController{
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let destinationVC = segue.destination as! PageViewController
         if let indexPath = tableView.indexPathForSelectedRow{
-            destinationVC.selectedCategory = dreamArray[indexPath.row]
+            destinationVC.selectedDream = dreamArray[indexPath.row]
         }
     }
     
@@ -62,9 +62,9 @@ class ListViewController: UITableViewController{
          self.tableView.reloadData()
      }
      
-     func loadItems(with request: NSFetchRequest<ItemCategory> = ItemCategory.fetchRequest()) {
+     func loadItems(with request: NSFetchRequest<DreamCategory> = DreamCategory.fetchRequest()) {
          do {
-             categoryArray = try context.fetch(request)
+             dreamArray = try context.fetch(request)
          } catch {
              print("Error fetching data from context: \(error)")
          }

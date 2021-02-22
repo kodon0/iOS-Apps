@@ -36,10 +36,21 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="RfN-nL-Eqy" kind="presentation" identifier="goToPage" id="bTO-i2-Cip"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nnS-Ji-iDE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1708.6956521739132" y="128.57142857142856"/>
+        </scene>
+        <!--Page View Controller-->
+        <scene sceneID="WB9-WR-tUL">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="RfN-nL-Eqy" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JjD-xN-gw6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2558" y="129"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="6fr-pW-Obn">
