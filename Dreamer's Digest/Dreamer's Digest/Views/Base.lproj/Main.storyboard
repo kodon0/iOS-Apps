@@ -45,10 +45,10 @@
             </objects>
             <point key="canvasLocation" x="1708.6956521739132" y="128.57142857142856"/>
         </scene>
-        <!--View Controller-->
+        <!--Content View Controller-->
         <scene sceneID="v78-Hp-wVa">
             <objects>
-                <viewController id="hiv-r3-voF" sceneMemberID="viewController">
+                <viewController id="hiv-r3-voF" customClass="ContentViewController" customModule="Dreamer_s_Digest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pF1-df-lK2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

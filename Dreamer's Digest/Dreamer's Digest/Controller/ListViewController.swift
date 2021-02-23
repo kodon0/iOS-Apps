@@ -46,7 +46,8 @@ class ListViewController: UITableViewController{
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let destinationVC = segue.destination as! ContentViewController
         if let indexPath = tableView.indexPathForSelectedRow{
-            destinationVC.dreamContent = dreamArray[indexPath.row].content!
+            destinationVC.dreamContentArray = dreamArray[indexPath.row].content!
+            //.content as! DreamContent
         }
     }
     
