@@ -72,7 +72,7 @@ class ListViewController: UITableViewController{
     
     //MARK: - Add new categories
     
-    @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {
+    @IBAction func composeButtonPressed(_ sender: UIBarButtonItem) {
             
             var textField = UITextField()
             let alert = UIAlertController(title: "Insert a new Todooshy item?", message: "", preferredStyle: .alert)
