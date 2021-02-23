@@ -1,27 +1,19 @@
 //
-//  PageViewController.swift
+//  ContentViewController.swift
 //  Dreamer's Digest
 //
-//  Created by Kieran O'Donnell on 22/02/2021.
+//  Created by Kieran O'Donnell on 24/02/2021.
 //  Copyright © 2021 baxmanduppa. All rights reserved.
 //
 
 import UIKit
 
-class PageViewController: UIPageViewController {
+class ContentViewController: UIViewController {
     
-    var dreamContent = [DreamContent]()
-    var selectedDream : DreamCategory? {
-        didSet{
-            // Load up modified items array
-            //loadItems()
-
-        }
-    }
+    var dreamContent = DreamContent()
     
-    // This gets Context from AppDelegate class
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()

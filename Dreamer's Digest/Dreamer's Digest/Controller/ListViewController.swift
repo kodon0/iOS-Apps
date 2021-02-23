@@ -40,13 +40,13 @@ class ListViewController: UITableViewController{
     
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "goToPage", sender: self)
+        performSegue(withIdentifier: "goToContent", sender: self)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let destinationVC = segue.destination as! PageViewController
+        let destinationVC = segue.destination as! ContentViewController
         if let indexPath = tableView.indexPathForSelectedRow{
-            destinationVC.selectedDream = dreamArray[indexPath.row]
+            destinationVC.dreamContent = dreamArray[indexPath.row].content!
         }
     }
     
