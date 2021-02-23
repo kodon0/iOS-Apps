@@ -72,15 +72,32 @@ class ListViewController: UITableViewController{
     
     //MARK: - Add new categories
     
-    @IBAction func composeButtonPressed(_ sender: UIBarButtonItem) {
-        var textField = UITextField()
-        let alert = UIAlertController(title: "Compose a new dream log?", message: "", preferredStyle: .alert)
-        let action = UIAlertAction(title: "Add new dream log", style: .default) { (action) in
-        print("Action success!")
-
+    @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {
+            
+            var textField = UITextField()
+            let alert = UIAlertController(title: "Insert a new Todooshy item?", message: "", preferredStyle: .alert)
+            let action = UIAlertAction(title: "Add new item", style: .default) { (action) in
+                // What heppens when user clicks Add Item button
+                print("Action success!")
+                
+                // Append new item to array with new addition for CoreData -> gets context
+                
+                let newDream = DreamCategory(context: self.context)
+                newDream.name = textField.text!
+//                newDream.content = self.content
+                self.dreamArray.append(newDream)
+                
+    //            Save items from defined method
+                self.saveItems()
+            
+            }
+            alert.addAction(action)
+            alert.addTextField { (alertTextField) in
+                alertTextField.placeholder = "Start typing away!"
+                textField = alertTextField
+            }
+            
+            present(alert, animated: true, completion: nil)
         }
-        
-        
-    }
 }
 
