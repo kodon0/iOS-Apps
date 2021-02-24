@@ -9,10 +9,10 @@
 import UIKit
 import CoreData
 
-class ContentViewController: UIViewController {
+class ContentViewController: UIViewController,  UITextViewDelegate {
     
     var dreamContentArray = [DreamContent]()
-    var selectedDream : DreamCategory {
+    var selectedDream : DreamCategory? {
         didSet{
             // Load up modified items array
             //loadItems()
@@ -22,7 +22,8 @@ class ContentViewController: UIViewController {
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
-
+    @IBOutlet weak var itemEntryTextView: UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -30,5 +31,37 @@ class ContentViewController: UIViewController {
     }
     
 
+    @IBAction func saveItem(_ sender: UIBarButtonItem) {
+        
+        guard let enteredText = itemEntryTextView?.text else {
+                 return
+             }
+         
+             if enteredText.isEmpty ||  itemEntryTextView?.text == "Type anything..."{
+        
+             let alert = UIAlertController(title: "Please Type Something", message: "Your entry was left blank.", preferredStyle: .alert)
+             alert.addAction(UIAlertAction(title: "Okay", style: .default) { action in
 
+             })
+
+             self.present(alert, animated: true, completion: nil)
+
+         } else {
+             
+                 guard let entryText = itemEntryTextView?.text else {
+                     return
+                 }
+            
+                 let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+                 let newEntry = DreamContent(context: context)
+                 newEntry.dreamContent = entryText
+                 
+                 (UIApplication.shared.delegate as! AppDelegate).saveContext()
+                 
+                 dismiss(animated: true, completion: nil)
+        
+        
+    }
+    }
+    
 }
