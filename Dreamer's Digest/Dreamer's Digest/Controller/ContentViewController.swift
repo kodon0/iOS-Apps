@@ -15,24 +15,27 @@ class ContentViewController: UIViewController,  UITextViewDelegate {
     var selectedDream : DreamCategory? {
         didSet{
             // Load up modified items array
-            //loadItems()
+            loadItems()
         }
     }
     
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
+
     @IBOutlet weak var itemEntryTextView: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+
     }
     
 
     @IBAction func saveItem(_ sender: UIBarButtonItem) {
-        
+    
         guard let enteredText = itemEntryTextView?.text else {
                  return
              }
@@ -63,5 +66,25 @@ class ContentViewController: UIViewController,  UITextViewDelegate {
         
     }
     }
+    
+     func loadItems(with request: NSFetchRequest<DreamContent> = DreamContent.fetchRequest(), predicate: NSPredicate? = nil) {
+        
+        
+        let categoryPredicate = NSPredicate(format: "parentCategory.name MATCHES[cd] %@", selectedDream!.name!)
+        
+        if let additionalPredicate = predicate {
+            request.predicate = NSCompoundPredicate(andPredicateWithSubpredicates: [categoryPredicate, additionalPredicate])
+        } else {
+            request.predicate = categoryPredicate
+        }
+        
+        
+         do {
+             dreamContentArray = try context.fetch(request)
+         } catch {
+             print("Error fetching data from context: \(error)")
+         }
+    }
+    
     
 }

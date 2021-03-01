@@ -2,7 +2,7 @@
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="16119" systemVersion="19H15" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="DreamCategory" representedClassName=".DreamCategory" syncable="YES" codeGenerationType="class">
         <attribute name="name" attributeType="String"/>
-        <relationship name="content" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DreamContent" inverseName="parentCategory" inverseEntity="DreamContent"/>
+        <relationship name="content" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="DreamContent" inverseName="parentCategory" inverseEntity="DreamContent"/>
     </entity>
     <entity name="DreamContent" representedClassName="DreamContent" syncable="YES" codeGenerationType="class">
         <attribute name="dreamContent" attributeType="String"/>

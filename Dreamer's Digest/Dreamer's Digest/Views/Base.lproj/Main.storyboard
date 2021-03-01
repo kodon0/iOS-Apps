@@ -69,12 +69,12 @@
                         <barButtonItem key="rightBarButtonItem" style="done" systemItem="save" id="7PZ-Jv-8Ee">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
-                                <action selector="saveItem:" destination="hiv-r3-voF" id="jJu-8t-hrh"/>
+                                <action selector="saveItem:" destination="hiv-r3-voF" id="mEf-mC-1Y2"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="itemEntryTextView" destination="OJN-hr-rJe" id="E1B-x0-teG"/>
+                        <outlet property="itemEntryTextView" destination="OJN-hr-rJe" id="Qyg-uK-EmT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UAO-4c-wXm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
