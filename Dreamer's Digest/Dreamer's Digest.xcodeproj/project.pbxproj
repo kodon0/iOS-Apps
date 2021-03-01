@@ -7,23 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D87341B25EDB0A900BCA565 /* Dreams_Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2D87341925EDB0A900BCA565 /* Dreams_Model.xcdatamodeld */; };
 		2DC77B6825DF1DCD0077A80F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC77B6725DF1DCD0077A80F /* AppDelegate.swift */; };
 		2DC77B6A25DF1DCD0077A80F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC77B6925DF1DCD0077A80F /* SceneDelegate.swift */; };
 		2DC77B6C25DF1DCD0077A80F /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC77B6B25DF1DCD0077A80F /* ListViewController.swift */; };
 		2DC77B6F25DF1DCD0077A80F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DC77B6D25DF1DCD0077A80F /* Main.storyboard */; };
-		2DC77B7225DF1DCD0077A80F /* Dreamer_s_Digest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2DC77B7025DF1DCD0077A80F /* Dreamer_s_Digest.xcdatamodeld */; };
 		2DC77B7425DF1DCF0077A80F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DC77B7325DF1DCF0077A80F /* Assets.xcassets */; };
 		2DC77B7725DF1DCF0077A80F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DC77B7525DF1DCF0077A80F /* LaunchScreen.storyboard */; };
 		2DE00E7A25E5B4AC00054C30 /* ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE00E7925E5B4AC00054C30 /* ContentViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2D87341A25EDB0A900BCA565 /* Dreams_Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Dreams_Model.xcdatamodel; sourceTree = "<group>"; };
 		2DC77B6425DF1DCD0077A80F /* Dreamer's Digest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dreamer's Digest.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DC77B6725DF1DCD0077A80F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2DC77B6925DF1DCD0077A80F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		2DC77B6B25DF1DCD0077A80F /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		2DC77B6E25DF1DCD0077A80F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		2DC77B7125DF1DCD0077A80F /* Dreamer_s_Digest.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Dreamer_s_Digest.xcdatamodel; sourceTree = "<group>"; };
 		2DC77B7325DF1DCF0077A80F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2DC77B7625DF1DCF0077A80F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2DC77B7825DF1DCF0077A80F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -44,7 +44,7 @@
 		2D44F79D25DF249800AEC90C /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				2DC77B7025DF1DCD0077A80F /* Dreamer_s_Digest.xcdatamodeld */,
+				2D87341925EDB0A900BCA565 /* Dreams_Model.xcdatamodeld */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -171,8 +171,8 @@
 				2DE00E7A25E5B4AC00054C30 /* ContentViewController.swift in Sources */,
 				2DC77B6C25DF1DCD0077A80F /* ListViewController.swift in Sources */,
 				2DC77B6825DF1DCD0077A80F /* AppDelegate.swift in Sources */,
-				2DC77B7225DF1DCD0077A80F /* Dreamer_s_Digest.xcdatamodeld in Sources */,
 				2DC77B6A25DF1DCD0077A80F /* SceneDelegate.swift in Sources */,
+				2D87341B25EDB0A900BCA565 /* Dreams_Model.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,13 +370,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		2DC77B7025DF1DCD0077A80F /* Dreamer_s_Digest.xcdatamodeld */ = {
+		2D87341925EDB0A900BCA565 /* Dreams_Model.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				2DC77B7125DF1DCD0077A80F /* Dreamer_s_Digest.xcdatamodel */,
+				2D87341A25EDB0A900BCA565 /* Dreams_Model.xcdatamodel */,
 			);
-			currentVersion = 2DC77B7125DF1DCD0077A80F /* Dreamer_s_Digest.xcdatamodel */;
-			path = Dreamer_s_Digest.xcdatamodeld;
+			currentVersion = 2D87341A25EDB0A900BCA565 /* Dreams_Model.xcdatamodel */;
+			path = Dreams_Model.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="16119" systemVersion="19H15" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="DreamCategory" representedClassName=".DreamCategory" syncable="YES" codeGenerationType="class">
+        <attribute name="name" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="DreamContent" representedClassName=".DreamContent" parentEntity="DreamCategory" syncable="YES" codeGenerationType="class">
+        <attribute name="dreamContent" attributeType="String"/>
+        <relationship name="parentCategory" optional="YES" maxCount="1" deletionRule="No Action" destinationEntity="DreamCategory"/>
+    </entity>
+    <elements>
+        <element name="DreamContent" positionX="-54" positionY="-9" width="128" height="73"/>
+        <element name="DreamCategory" positionX="-291.5703125" positionY="-178.29296875" width="128" height="58"/>
+    </elements>
+</model>

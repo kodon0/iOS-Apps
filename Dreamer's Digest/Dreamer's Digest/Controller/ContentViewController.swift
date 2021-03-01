@@ -29,7 +29,6 @@ class ContentViewController: UIViewController,  UITextViewDelegate {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        
 
     }
     
@@ -55,36 +54,58 @@ class ContentViewController: UIViewController,  UITextViewDelegate {
                      return
                  }
             
-                 let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+//                 let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
                  let newEntry = DreamContent(context: context)
                  newEntry.dreamContent = entryText
+                newEntry.parentCategory = self.selectedDream
                  
-                 (UIApplication.shared.delegate as! AppDelegate).saveContext()
+//                 (UIApplication.shared.delegate as! AppDelegate).saveContext()
+//                print("saved \(newEntry)")
                  
                  dismiss(animated: true, completion: nil)
-        
+                        do {
+                    try context.save()
+                            print("saved \(newEntry)")
+                } catch {
+                    print("Error saving Context: \(error)")
+                }
+                
+        dismiss(animated: true, completion: nil)
         
     }
     }
     
-     func loadItems(with request: NSFetchRequest<DreamContent> = DreamContent.fetchRequest(), predicate: NSPredicate? = nil) {
-        
+//     func loadItems(with request: NSFetchRequest<DreamContent> = DreamContent.fetchRequest(), predicate: NSPredicate? = nil) {
+//
+//
+//        let categoryPredicate = NSPredicate(format: "parentCategory.name CONTAINS[cd] %@", selectedDream!.name!)
+//
+//        if let additionalPredicate = predicate {
+//            request.predicate = NSCompoundPredicate(andPredicateWithSubpredicates: [categoryPredicate, additionalPredicate])
+//        } else {
+//            request.predicate = categoryPredicate
+//        }
+//
+//
+//         do {
+//             dreamContentArray = try context.fetch(request)
+//         } catch {
+//             print("Error fetching data from context: \(error)")
+//         }
+//    }
+//
+    
+    func loadItems(with request: NSFetchRequest<DreamContent> = DreamContent.fetchRequest(), predicate: NSPredicate? = nil) {
         
         let categoryPredicate = NSPredicate(format: "parentCategory.name MATCHES[cd] %@", selectedDream!.name!)
-        
-        if let additionalPredicate = predicate {
-            request.predicate = NSCompoundPredicate(andPredicateWithSubpredicates: [categoryPredicate, additionalPredicate])
-        } else {
-            request.predicate = categoryPredicate
-        }
-        
-        
+
          do {
              dreamContentArray = try context.fetch(request)
+            print("loaded \(dreamContentArray)")
+            itemEntryTextView?.text = "woong"
          } catch {
              print("Error fetching data from context: \(error)")
          }
     }
-    
     
 }
